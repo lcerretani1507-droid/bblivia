@@ -1,4 +1,4 @@
-# Astro Starter Kit: Minimal
+# BBLivia
 
 ```sh
 npm create astro@latest -- --template minimal
