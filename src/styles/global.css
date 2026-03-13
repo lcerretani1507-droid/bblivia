@@ -5,10 +5,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
     @apply bg-warm-100 text-sea-900;
+    /* Reserve space for the sticky mobile CTA + iOS home indicator */
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 
   /* Remove default list styles in nav contexts */
@@ -16,6 +19,17 @@
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  /* Improve tap responsiveness on interactive elements */
+  a, button, [role="button"] {
+    touch-action: manipulation;
+  }
+
+  /* Prevent text from overflowing on small screens */
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 

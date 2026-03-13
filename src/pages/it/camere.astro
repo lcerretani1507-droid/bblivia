@@ -49,14 +49,14 @@ const hotelRoomSchemas = rooms.map(room => ({
   ]}
 >
   <!-- Hero -->
-  <section class="relative h-64 sm:h-80 flex items-center justify-center overflow-hidden -mt-20">
+  <section class="relative h-52 sm:h-72 flex items-center justify-center overflow-hidden -mt-20">
     <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=80" alt="Camere B&B Castiglione della Pescaia" class="w-full h-full object-cover" />
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=80" alt="Camere B&B Castiglione della Pescaia" class="w-full h-full object-cover" fetchpriority="high" />
       <div class="absolute inset-0 bg-sea-900/55"></div>
     </div>
     <div class="relative z-10 text-center text-white px-4">
-      <h1 class="font-serif text-4xl sm:text-5xl font-bold drop-shadow-md mb-3">{t.rooms.hero}</h1>
-      <p class="text-white/80 text-lg">{t.rooms.subtitle}</p>
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold drop-shadow-md mb-2 sm:mb-3">{t.rooms.hero}</h1>
+      <p class="text-white/80 text-sm sm:text-lg">{t.rooms.subtitle}</p>
     </div>
   </section>
 
@@ -75,13 +75,14 @@ const hotelRoomSchemas = rooms.map(room => ({
   <!-- Intro -->
   <section class="py-12 px-4 bg-warm-100">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-sea-700 text-lg leading-relaxed">{t.rooms.intro}</p>
+      <p class="text-sea-700 text-lg leading-relaxed mb-4">{t.rooms.intro}</p>
+      <p class="text-sea-600 text-sm italic">{t.rooms.terraceNote}</p>
     </div>
   </section>
 
   <!-- Room grid -->
-  <section class="py-12 px-4 pb-20 bg-warm-100">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <section class="py-6 px-4 pb-20 bg-warm-100">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
       {rooms.map((room, i) => <RoomCard room={room} lang={lang} featured={i === 3} />)}
     </div>
   </section>

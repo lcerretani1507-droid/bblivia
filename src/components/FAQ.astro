@@ -17,7 +17,7 @@ const { lang, items } = Astro.props;
 <div class="space-y-3">
   {items.map((item, idx) => (
     <details class="group bg-white rounded-xl border border-sea-100 overflow-hidden" id={`faq-${item.id}`}>
-      <summary class="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer select-none list-none hover:bg-sea-50 transition-colors">
+      <summary class="flex items-center justify-between gap-4 px-5 sm:px-6 py-4 sm:py-5 cursor-pointer select-none list-none hover:bg-sea-50 transition-colors min-h-[56px]">
         <span class="font-medium text-sea-900 text-sm sm:text-base">{item.question[lang]}</span>
         <svg
           class="w-5 h-5 flex-shrink-0 text-sea-400 transition-transform duration-200 group-open:rotate-180"

@@ -31,26 +31,26 @@ const t = useTranslations(lang);
       />
       <div class="absolute inset-0 bg-hero-gradient"></div>
     </div>
-    <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-      <p class="text-sand-200 text-sm sm:text-base font-medium tracking-widest uppercase mb-4 animate-fade-in">
+    <div class="relative z-10 text-center text-white px-5 max-w-4xl mx-auto">
+      <p class="text-sand-200 text-xs sm:text-sm font-medium tracking-widest uppercase mb-4">
         {t.home.heroSubtitle}
       </p>
-      <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
+      <h1 class="font-serif text-3xl sm:text-6xl lg:text-7xl font-bold mb-5 leading-tight drop-shadow-lg">
         {config.propertyName}
       </h1>
-      <p class="text-white/85 text-lg sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed">
+      <p class="text-white/85 text-base sm:text-xl max-w-xl mx-auto mb-8 leading-relaxed">
         {config.tagline[lang]}
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
         <a
           href={t.routes.book}
-          class="px-8 py-4 bg-sand-400 hover:bg-sand-300 text-sea-900 font-bold rounded-full text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform"
+          class="px-7 py-4 bg-sand-400 hover:bg-sand-300 text-sea-900 font-bold rounded-full text-base sm:text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform min-h-[52px] flex items-center justify-center"
         >
           {t.cta.bookNow}
         </a>
         <a
           href={t.routes.rooms}
-          class="px-8 py-4 bg-white/15 hover:bg-white/25 text-white border border-white/30 font-semibold rounded-full text-lg transition-all backdrop-blur-sm"
+          class="px-7 py-4 bg-white/15 hover:bg-white/25 text-white border border-white/30 font-semibold rounded-full text-base sm:text-lg transition-all backdrop-blur-sm min-h-[52px] flex items-center justify-center"
         >
           {t.cta.viewAllRooms}
         </a>
@@ -65,7 +65,7 @@ const t = useTranslations(lang);
   </section>
 
   <!-- About teaser -->
-  <section class="py-20 px-4 bg-warm-100">
+  <section class="py-14 sm:py-20 px-4 bg-warm-100">
     <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div>
         <p class="text-sand-500 text-sm font-semibold uppercase tracking-widest mb-3">{t.home.aboutSubtitle}</p>
@@ -95,13 +95,13 @@ const t = useTranslations(lang);
   </section>
 
   <!-- Rooms teaser -->
-  <section class="py-20 px-4 bg-white">
+  <section class="py-16 sm:py-20 px-4 bg-white">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
+      <div class="text-center mb-10 sm:mb-12">
         <p class="text-sand-500 text-sm font-semibold uppercase tracking-widest mb-3">{t.home.roomsSubtitle}</p>
         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sea-900">{t.home.roomsTitle}</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
         {rooms.map((room, i) => <RoomCard room={room} lang={lang} featured={i === 3} />)}
       </div>
       <div class="text-center">
@@ -119,17 +119,17 @@ const t = useTranslations(lang);
   <BookingCTA lang={lang} />
 
   <!-- Apartments teaser -->
-  <section class="py-20 px-4 bg-warm-100">
+  <section class="py-16 sm:py-20 px-4 bg-warm-100">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
+      <div class="text-center mb-10 sm:mb-12">
         <p class="text-sand-500 text-sm font-semibold uppercase tracking-widest mb-3">{t.home.apartmentsSubtitle}</p>
         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sea-900">{t.home.apartmentsTitle}</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
         {apartments.map(apt => <ApartmentCard apartment={apt} lang={lang} />)}
       </div>
       <div class="text-center">
-        <a href={t.routes.apartments} class="inline-flex items-center gap-2 px-7 py-3 border-2 border-sea-700 text-sea-700 hover:bg-sea-700 hover:text-white font-semibold rounded-full transition-all">
+        <a href={t.routes.apartments} class="inline-flex items-center gap-2 px-7 py-3 border-2 border-sea-700 text-sea-700 hover:bg-sea-700 hover:text-white font-semibold rounded-full transition-all min-h-[48px]">
           {t.cta.viewAllApartments}
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

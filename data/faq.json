@@ -15,14 +15,14 @@
   {
     "id": "parcheggio",
     "question": {
-      "it": "Il parcheggio è gratuito?",
-      "en": "Is parking free of charge?",
-      "de": "Ist das Parken kostenlos?"
+      "it": "Il parcheggio è disponibile?",
+      "en": "Is parking available?",
+      "de": "Ist ein Parkplatz verfügbar?"
     },
     "answer": {
-      "it": "Sì, il parcheggio privato è gratuito e riservato agli ospiti. Non è custodito ma si trova in un cortile privato con recinzione e cancello.",
-      "en": "Yes, private parking is free and reserved for guests. It is not supervised but is located in a private fenced courtyard with a gate.",
-      "de": "Ja, der Privatparkplatz ist kostenlos und für Gäste reserviert. Er wird nicht bewacht, befindet sich aber in einem eingezäunten Innenhof mit Tor."
+      "it": "Sì, il parcheggio privato è gratuito e riservato agli ospiti del B&B. Non è custodito ma si trova in un cortile privato con recinzione e cancello. Nota: il parcheggio privato non è disponibile per gli appartamenti.",
+      "en": "Yes, free private parking is available and reserved for B&B guests. It is not supervised but is located in a private fenced courtyard with a gate. Please note: private parking is not available for apartment guests.",
+      "de": "Ja, kostenloser Privatparkplatz steht für B&B-Gäste zur Verfügung. Er wird nicht bewacht, befindet sich aber in einem eingezäunten Innenhof mit Tor. Hinweis: Für Apartment-Gäste steht kein Privatparkplatz zur Verfügung."
     }
   },
   {
@@ -80,14 +80,27 @@
   {
     "id": "wifi",
     "question": {
-      "it": "C'è il Wi-Fi gratuito?",
-      "en": "Is there free Wi-Fi?",
-      "de": "Gibt es kostenloses WLAN?"
+      "it": "C'è il Wi-Fi gratuito nelle camere?",
+      "en": "Is there free Wi-Fi in the rooms?",
+      "de": "Gibt es kostenloses WLAN in den Zimmern?"
     },
     "answer": {
-      "it": "Sì, la connessione Wi-Fi gratuita è disponibile in tutta la struttura.",
-      "en": "Yes, free Wi-Fi is available throughout the property.",
-      "de": "Ja, kostenloses WLAN ist im gesamten Objekt verfügbar."
+      "it": "Sì, la connessione Wi-Fi gratuita è disponibile in tutte le camere del B&B.",
+      "en": "Yes, free Wi-Fi is available in all B&B rooms.",
+      "de": "Ja, kostenloses WLAN ist in allen B&B-Zimmern verfügbar."
+    }
+  },
+  {
+    "id": "wifi-appartamenti",
+    "question": {
+      "it": "C'è il Wi-Fi negli appartamenti?",
+      "en": "Is there Wi-Fi in the apartments?",
+      "de": "Gibt es WLAN in den Apartments?"
+    },
+    "answer": {
+      "it": "No, il Wi-Fi non è disponibile negli appartamenti.",
+      "en": "No, Wi-Fi is not available in the apartments.",
+      "de": "Nein, in den Apartments ist kein WLAN verfügbar."
     }
   },
   {

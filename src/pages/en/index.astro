@@ -70,7 +70,7 @@ const t = useTranslations(lang);
         <p class="text-sand-500 text-sm font-semibold uppercase tracking-widest mb-3">{t.home.roomsSubtitle}</p>
         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sea-900">{t.home.roomsTitle}</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
         {rooms.map((room, i) => <RoomCard room={room} lang={lang} featured={i === 3} />)}
       </div>
       <div class="text-center">
@@ -90,7 +90,7 @@ const t = useTranslations(lang);
         <p class="text-sand-500 text-sm font-semibold uppercase tracking-widest mb-3">{t.home.apartmentsSubtitle}</p>
         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sea-900">{t.home.apartmentsTitle}</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
         {apartments.map(apt => <ApartmentCard apartment={apt} lang={lang} />)}
       </div>
       <div class="text-center">

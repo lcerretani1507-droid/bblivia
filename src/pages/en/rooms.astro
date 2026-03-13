@@ -48,11 +48,12 @@ const hotelRoomSchemas = rooms.map(room => ({
   </section>
   <section class="py-12 px-4 bg-warm-100">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-sea-700 text-lg leading-relaxed">{t.rooms.intro}</p>
+      <p class="text-sea-700 text-lg leading-relaxed mb-4">{t.rooms.intro}</p>
+      <p class="text-sea-600 text-sm italic">{t.rooms.terraceNote}</p>
     </div>
   </section>
-  <section class="py-12 px-4 pb-20 bg-warm-100">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <section class="py-6 px-4 pb-20 bg-warm-100">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
       {rooms.map((room, i) => <RoomCard room={room} lang={lang} featured={i === 3} />)}
     </div>
   </section>

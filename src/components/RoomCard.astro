@@ -54,7 +54,7 @@ const amenityIcons: Record<string, string> = {
     )}
   </div>
 
-  <div class="p-6 flex flex-col flex-1">
+  <div class="p-5 sm:p-6 flex flex-col flex-1">
     <h3 class="font-serif text-xl font-bold text-sea-900 mb-1">{room.name[lang]}</h3>
     <p class="text-sea-600 text-sm mb-4">{room.shortDescription[lang]}</p>
 
@@ -78,10 +78,10 @@ const amenityIcons: Record<string, string> = {
 
     <div class="mt-auto">
       <a
-        href={t.routes.book}
-        class="block w-full text-center px-5 py-3 bg-sea-700 hover:bg-sea-600 text-white font-semibold rounded-xl transition-colors text-sm"
+        href={`${t.routes.rooms}/${room.id}`}
+        class="flex items-center justify-center w-full px-5 py-3 bg-sea-700 hover:bg-sea-600 text-white font-semibold rounded-xl transition-colors text-sm min-h-[44px]"
       >
-        {t.cta.bookRoom}
+        {t.cta.discoverMore}
       </a>
     </div>
   </div>

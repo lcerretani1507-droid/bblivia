@@ -29,6 +29,7 @@
     "checkAvailability": "Check Availability",
     "bookRoom": "Book this Room",
     "bookApartment": "Book this Apartment",
+    "bookApartmentEmail": "Book by email",
     "viewAll": "View All",
     "viewAllRooms": "View All Rooms",
     "viewAllApartments": "View All Apartments"
@@ -42,7 +43,7 @@
     "roomsTitle": "Rooms",
     "roomsSubtitle": "For couples, friends, or families — we'll find the room that suits you best",
     "apartmentsTitle": "Apartments",
-    "apartmentsSubtitle": "Independent spaces for longer stays and larger groups",
+    "apartmentsSubtitle": "Three independent apartments, 50 metres from the B&B, up to 4 guests",
     "surroundingsTitle": "Surroundings",
     "surroundingsSubtitle": "In the heart of the Maremma Toscana",
     "surroundingsText": "Castiglione della Pescaia, awarded 5 Sails by Legambiente and the European Blue Flag, is one of the top tourist destinations in the Touring Club guide. Nature, culture, cuisine, and medieval villages within reach.",
@@ -62,39 +63,43 @@
     "section2Title": "Our values",
     "section2Text": "Courtesy, comfort, and warmth are our guiding values. Making your holiday an unforgettable experience is our goal. The sound of the sea will be the soundtrack of your stay.",
     "section3Title": "Rooms and apartments",
-    "section3Text": "Fully renovated spaces, comfortable environments suited to couples, families, and groups. All rooms feature air conditioning, Wi-Fi, TV, minibar, and private bathroom. Breakfast, served in the main dining room overlooking the sea, is always included. Private parking guaranteed.",
+    "section3Text": "Fully renovated spaces, comfortable environments suited to couples and families. All rooms feature air conditioning, Wi-Fi, TV, mini fridge, and private bathroom. Breakfast, served in the main dining room overlooking the sea, is always included in B&B rooms. Private parking guaranteed. The 3 apartments are located 50 metres from the B&B.",
     "factBoxTitle": "At a glance",
     "fact1": "Seafront with direct beach access",
-    "fact2": "4 rooms and 2 apartments",
+    "fact2": "5 rooms and 3 apartments (50 metres from the B&B)",
     "fact3": "Breakfast included (B&B rooms)",
-    "fact4": "Free private parking",
-    "fact5": "Free Wi-Fi throughout",
+    "fact4": "Free private parking (B&B only)",
+    "fact5": "Free Wi-Fi in all B&B rooms",
     "fact6": "9-minute walk to town centre"
   },
 
   "rooms": {
     "title": "Rooms",
-    "metaDescription": "Discover our B&B rooms in Castiglione della Pescaia: double rooms with sea view, balcony, air conditioning and breakfast included.",
+    "metaDescription": "Discover the 5 rooms at B&B da Livia in Castiglione della Pescaia: double rooms with sea view, private bathroom, air conditioning and breakfast included.",
     "hero": "Our Rooms",
     "subtitle": "Renovated spaces, modern comforts, sea views",
-    "intro": "Our rooms face directly onto the sea. All rooms feature air conditioning, free Wi-Fi, TV, minibar, and private bathroom. Breakfast, served in the main dining room overlooking the sea, is always included. Private parking guaranteed. Our rooms accommodate up to 3 guests.",
+    "intro": "Our rooms face directly onto the sea. All rooms feature air conditioning, free Wi-Fi, TV, mini fridge, and a private bathroom with hairdryer. Breakfast, served in the main dining room overlooking the sea, is always included. Private parking guaranteed.",
+    "terraceNote": "The Comfort Room and Classic with Balcony feature a private terrace. Not all rooms have a private terrace.",
     "amenitiesTitle": "Included in all rooms",
     "maxGuests": "Up to {n} guests",
-    "faqTitle": "Frequently asked questions about rooms"
+    "faqTitle": "Frequently asked questions about rooms",
+    "privateBathNote": "Every room has a private bathroom with hairdryer, toiletries and towels."
   },
 
   "apartments": {
     "title": "Apartments",
-    "metaDescription": "Seafront apartments in Castiglione della Pescaia for families and groups. Fully equipped kitchen, pets welcome, private parking.",
+    "metaDescription": "Three apartments in Castiglione della Pescaia, 50 metres from B&B da Livia and less than 100 metres from the beach. Fully equipped kitchen, private terrace, pets welcome. Book by email.",
     "hero": "Our Apartments",
-    "subtitle": "Independence and comfort steps from the beach",
-    "intro": "Our apartments are fully equipped and located just metres from the beach. They are the ideal solution for larger families or longer stays. Small pets are welcome in the apartments.",
+    "subtitle": "Three independent apartments with terrace, 50 metres from the B&B",
+    "intro": "Our 3 apartments — Elba, Giglio, and Montecristo — are all in the same building, approximately 50 metres from the B&B and less than 100 metres from the beach. Each apartment has a fully equipped kitchen, a private terrace for outdoor dining, air conditioning, and a private bathroom. Wi-Fi is not available in the apartments, and there is no private parking. Small pets are welcome. To book, email info@bblivia.com.",
+    "bookingNote": "To book an apartment, send an email to",
     "maxGuests": "Up to {n} guests",
     "bedrooms": "{n} bedrooms",
     "bathrooms": "{n} bathrooms",
     "petsAllowed": "Pets welcome",
     "petsNotAllowed": "No pets",
-    "faqTitle": "Frequently asked questions about apartments"
+    "faqTitle": "Frequently asked questions about apartments",
+    "floorLabel": "Floor"
   },
 
   "surroundings": {
@@ -125,7 +130,7 @@
 
   "book": {
     "title": "Book",
-    "metaDescription": "Book your room or apartment at our B&B in Castiglione della Pescaia directly. Check availability and rates online.",
+    "metaDescription": "Book your room at B&B da Livia in Castiglione della Pescaia directly. Check availability and rates online.",
     "hero": "Book Your Stay",
     "backToSite": "Back to website"
   },
@@ -144,7 +149,8 @@
     "minibar": "Mini Fridge",
     "private-bath": "Private Bathroom",
     "sea-view": "Sea View",
-    "balcony": "Balcony",
+    "balcony": "Private Terrace",
+    "terrace": "Private Terrace",
     "kitchen": "Fully Equipped Kitchen",
     "washing-machine": "Washing Machine",
     "garden": "Private Garden",

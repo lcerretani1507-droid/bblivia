@@ -1,11 +1,11 @@
 [
   {
-    "id": "camera-standard",
+    "id": "camera-comfort",
     "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
     "imageAlt": {
-      "it": "Camera Standard con balconcino e vista mare",
-      "en": "Standard Room with balcony and sea view",
-      "de": "Standardzimmer mit Balkon und Meerblick"
+      "it": "Camera Comfort con balconcino a tasca sul tetto",
+      "en": "Comfort Room with small private roof terrace",
+      "de": "Comfort-Zimmer mit kleinem Dachbalkon"
     },
     "maxGuests": 2,
     "bedType": {
@@ -16,19 +16,19 @@
     "numberOfBeds": 1,
     "amenities": ["wifi", "ac", "tv", "minibar", "private-bath", "balcony"],
     "name": {
-      "it": "Camera Standard",
-      "en": "Standard Room",
-      "de": "Standardzimmer"
+      "it": "Camera Comfort",
+      "en": "Comfort Room",
+      "de": "Comfort-Zimmer"
     },
     "shortDescription": {
-      "it": "Camera matrimoniale con balconcino",
-      "en": "Double room with small balcony",
-      "de": "Doppelzimmer mit kleinem Balkon"
+      "it": "Camera matrimoniale con balconcino a tasca sul tetto",
+      "en": "Double room with small private roof terrace",
+      "de": "Doppelzimmer mit kleinem Dachbalkon"
     },
     "description": {
-      "it": "La nostra Camera Standard è un ambiente accogliente e completamente ristrutturato, dotata di un comodo letto matrimoniale e un piccolo balconcino privato. La camera dispone di aria condizionata, TV, frigorifero, connessione Wi-Fi gratuita e bagno privato. La colazione è sempre inclusa nel prezzo.",
-      "en": "Our Standard Room is a welcoming, fully renovated space with a comfortable double bed and a small private balcony. The room features air conditioning, TV, minibar, free Wi-Fi, and a private bathroom. Breakfast is always included.",
-      "de": "Unser Standardzimmer ist ein einladendes, vollständig renoviertes Zimmer mit einem bequemen Doppelbett und einem kleinen privaten Balkon. Das Zimmer verfügt über Klimaanlage, TV, Minibar, kostenloses WLAN und ein eigenes Bad. Frühstück ist immer inklusive."
+      "it": "Luminosa e confortevole, posizionata al piano superiore, la Camera Comfort ha un balconcino a tasca sul tetto, perfetto per una pausa di relax all'aperto. Completamente accessoriata, è dotata di bagno privato con phon, saponi e asciugamani, aria condizionata, Wi-Fi gratuito e minifrigo. Al centro, un comodo letto matrimoniale: un'ottima soluzione per un soggiorno di coppia. La colazione è sempre inclusa nel prezzo.",
+      "en": "Bright and comfortable, located on the upper floor, the Comfort Room has a small private roof terrace — perfect for a relaxing moment outdoors. Fully equipped with a private bathroom with hairdryer, toiletries and towels, air conditioning, free Wi-Fi, and mini fridge. A comfortable double bed makes it ideal for couples. Breakfast is always included.",
+      "de": "Hell und komfortabel, im Obergeschoss gelegen, verfügt das Comfort-Zimmer über einen kleinen privaten Dachbalkon — ideal für eine entspannte Pause im Freien. Voll ausgestattet mit eigenem Bad mit Haartrockner, Toilettenartikeln und Handtüchern, Klimaanlage, kostenlosem WLAN und Minibar. Ein bequemes Doppelbett macht es ideal für Paare. Frühstück immer inklusive."
     }
   },
   {
@@ -37,13 +37,13 @@
     "imageAlt": {
       "it": "Camera Classic con vista mare laterale",
       "en": "Classic Room with lateral sea view",
-      "de": "Klassisches Zimmer mit seitlichem Meerblick"
+      "de": "Classic-Zimmer mit seitlichem Meerblick"
     },
-    "maxGuests": 2,
+    "maxGuests": 3,
     "bedType": {
-      "it": "Matrimoniale",
-      "en": "Double",
-      "de": "Doppelbett"
+      "it": "Matrimoniale (letto singolo aggiuntivo su richiesta)",
+      "en": "Double (extra single bed on request)",
+      "de": "Doppelbett (Einzelbett auf Anfrage)"
     },
     "numberOfBeds": 1,
     "amenities": ["wifi", "ac", "tv", "minibar", "private-bath", "sea-view"],
@@ -58,9 +58,9 @@
       "de": "Doppelzimmer mit seitlichem Meerblick"
     },
     "description": {
-      "it": "La Camera Classic offre una suggestiva vista laterale sul mare. Arredata con gusto, dispone di tutti i comfort moderni: aria condizionata, TV, frigorifero, Wi-Fi gratuito e bagno privato. Un'ottima scelta per chi vuole godersi il suono del mare. Colazione inclusa.",
-      "en": "The Classic Room offers a lovely lateral sea view. Tastefully furnished, it features all modern comforts: air conditioning, TV, minibar, free Wi-Fi, and a private bathroom. A great choice for those who want to enjoy the sound of the sea. Breakfast included.",
-      "de": "Das Classic-Zimmer bietet einen wunderschönen seitlichen Meerblick. Geschmackvoll eingerichtet, verfügt es über alle modernen Annehmlichkeiten: Klimaanlage, TV, Minibar, kostenloses WLAN und ein eigenes Bad. Frühstück inklusive."
+      "it": "Spaziosa e confortevole, la Camera Classic è dotata di tutti i migliori servizi per garantire il massimo del comfort agli ospiti. Completamente accessoriata comprende: bagno privato con phon, saponi e asciugamani, aria condizionata, Wi-Fi gratuito e minifrigo. Un ambiente luminoso, grazie alla grande finestra che permette una vista mare laterale. Perfetta per due persone, può ospitare fino a 3 con la possibilità di aggiunta di un letto singolo su richiesta. La colazione è sempre inclusa.",
+      "en": "Spacious and comfortable, the Classic Room is equipped with all the best amenities to guarantee maximum comfort. Fully equipped with a private bathroom with hairdryer, toiletries and towels, air conditioning, free Wi-Fi, and mini fridge. A bright and welcoming space, thanks to the large window with a lateral sea view. Perfect for two, it can accommodate up to 3 guests with an extra single bed on request. Breakfast always included.",
+      "de": "Geräumig und komfortabel, verfügt das Classic-Zimmer über alle Annehmlichkeiten für maximalen Komfort. Voll ausgestattet mit eigenem Bad mit Haartrockner, Toilettenartikeln und Handtüchern, Klimaanlage, kostenlosem WLAN und Minibar. Ein heller Raum dank des großen Fensters mit seitlichem Meerblick. Perfekt für zwei Personen, bis zu 3 Gäste mit einem Einzelbett auf Anfrage möglich. Frühstück immer inklusive."
     }
   },
   {
@@ -85,14 +85,14 @@
       "de": "Classic mit Balkon"
     },
     "shortDescription": {
-      "it": "Camera matrimoniale con balconcino e vista mare",
+      "it": "Camera matrimoniale con balconcino vista mare",
       "en": "Double room with balcony and sea view",
       "de": "Doppelzimmer mit Balkon und Meerblick"
     },
     "description": {
-      "it": "La Camera Classic con Balconcino unisce il comfort di una camera moderna alla magia di un balconcino privato con vista sul mare. Godetevi le albe e i tramonti direttamente dalla vostra stanza. Dotata di aria condizionata, TV, frigorifero, Wi-Fi e bagno privato. Colazione inclusa.",
-      "en": "The Classic with Balcony combines the comfort of a modern room with the magic of a private balcony overlooking the sea. Enjoy sunrises and sunsets directly from your room. Features air conditioning, TV, minibar, Wi-Fi, and private bathroom. Breakfast included.",
-      "de": "Das Classic mit Balkon verbindet den Komfort eines modernen Zimmers mit der Magie eines privaten Balkons mit Meerblick. Genießen Sie Sonnenauf- und -untergänge direkt von Ihrem Zimmer. Klimaanlage, TV, Minibar, WLAN und eigenes Bad. Frühstück inklusive."
+      "it": "La Camera Classic con Balconcino è dotata di tutti i comfort della Camera Classic, con l'aggiunta di un balconcino con vista sul mare. Completamente accessoriata comprende: bagno privato con phon, saponi e asciugamani, aria condizionata, Wi-Fi gratuito e minifrigo. Perfetta per una coppia che desidera godersi il panorama marino direttamente dalla propria stanza. La colazione è sempre inclusa.",
+      "en": "The Classic with Balcony features all the comforts of the Classic Room, with the addition of a private balcony overlooking the sea. Fully equipped with a private bathroom with hairdryer, toiletries and towels, air conditioning, free Wi-Fi, and mini fridge. Perfect for a couple wishing to enjoy the sea view directly from their room. Breakfast always included.",
+      "de": "Das Classic mit Balkon bietet alle Annehmlichkeiten des Classic-Zimmers, ergänzt durch einen privaten Balkon mit Meerblick. Voll ausgestattet mit eigenem Bad mit Haartrockner, Toilettenartikeln und Handtüchern, Klimaanlage, kostenlosem WLAN und Minibar. Perfekt für ein Paar, das den Meerblick direkt vom Zimmer genießen möchte. Frühstück immer inklusive."
     }
   },
   {
@@ -117,14 +117,14 @@
       "de": "Superior Meerblick"
     },
     "shortDescription": {
-      "it": "Camera matrimoniale con finestra fronte mare",
-      "en": "Double room with frontal sea view window",
-      "de": "Doppelzimmer mit frontaler Meeransicht"
+      "it": "Camera superior con grande finestra fronte mare",
+      "en": "Superior room with large frontal sea view window",
+      "de": "Superior-Zimmer mit großem Fenster zur Meereseite"
     },
     "description": {
-      "it": "La nostra camera più esclusiva: la Superior Vista Mare offre una vista frontale mozzafiato sul mare. Al risveglio, il mare è il primo spettacolo che vi accoglie. Spaziosa e luminosa, è dotata di aria condizionata, TV, frigorifero, Wi-Fi gratuito e bagno privato. Può ospitare fino a 3 persone. Colazione inclusa.",
-      "en": "Our most exclusive room: the Superior Sea View offers a breathtaking frontal sea panorama. Upon waking, the sea is the first spectacle that greets you. Spacious and bright, it features air conditioning, TV, minibar, free Wi-Fi, and a private bathroom. Accommodates up to 3 guests. Breakfast included.",
-      "de": "Unser exklusivstes Zimmer: das Superior Meerblick bietet ein atemberaubendes Frontalpanorama auf das Meer. Beim Aufwachen ist das Meer das erste Spektakel, das Sie begrüßt. Geräumig und hell, mit Klimaanlage, TV, Minibar, kostenlosem WLAN und eigenem Bad. Für bis zu 3 Gäste. Frühstück inklusive."
+      "it": "La Camera Superior Vista Mare gode di una grande finestra a vetrata fronte mare: uno spettacolo unico al risveglio. Un ambiente spazioso e completamente rinnovato, può ospitare fino a 3 persone. Dotata di bagno privato con phon, saponi e asciugamani, minifrigo, connessione Wi-Fi gratuita e impianto ad aria condizionata. La colazione, servita nella sala principale affacciata sul mare, è sempre inclusa nel prezzo.",
+      "en": "The Superior Sea View Room enjoys a large glazed window facing the sea — a unique spectacle to wake up to. Spacious and completely refurbished, it accommodates up to 3 guests. Equipped with a private bathroom with hairdryer, toiletries and towels, mini fridge, free Wi-Fi, and air conditioning. Breakfast, served in the main dining room overlooking the sea, is always included.",
+      "de": "Das Superior Meerblick-Zimmer genießt ein großes Glasfenster zur Meereseite — ein einzigartiges Spektakel zum Aufwachen. Geräumig und vollständig renoviert, für bis zu 3 Gäste geeignet. Ausgestattet mit eigenem Bad mit Haartrockner, Toilettenartikeln und Handtüchern, Minibar, kostenlosem WLAN und Klimaanlage. Frühstück, im Hauptspeisesaal mit Meerblick serviert, immer inklusive."
     }
   }
 ]

@@ -6,9 +6,9 @@
     "de": "Aus dem Herzen der toskanischen Maremma, direkt am Meer"
   },
   "description": {
-    "it": "Bed & Breakfast a conduzione familiare a Castiglione della Pescaia, Maremma Toscana. Camere e appartamenti fronte mare con colazione inclusa, parcheggio privato e accesso diretto alla spiaggia.",
-    "en": "Family-run Bed & Breakfast in Castiglione della Pescaia, Maremma Toscana. Sea-view rooms and apartments with breakfast included, private parking, and direct beach access.",
-    "de": "Familiengeführtes Bed & Breakfast in Castiglione della Pescaia, Maremma Toscana. Meerblickzimmer und Apartments mit inkludiertem Frühstück, Privatparkplatz und direktem Strandzugang."
+    "it": "Bed & Breakfast a conduzione familiare a Castiglione della Pescaia, Maremma Toscana. 5 camere fronte mare e 3 appartamenti a 50 metri dal B&B, con colazione inclusa e parcheggio privato.",
+    "en": "Family-run Bed & Breakfast in Castiglione della Pescaia, Maremma Toscana. 5 sea-view rooms and 3 apartments 50m from the B&B, with breakfast included and private parking.",
+    "de": "Familiengeführtes Bed & Breakfast in Castiglione della Pescaia, Maremma Toscana. 5 Meerblickzimmer und 3 Apartments 50m vom B&B, mit inkludiertem Frühstück und Privatparkplatz."
   },
   "address": {
     "street": "Via Arenile, 2",
@@ -30,8 +30,8 @@
   "checkinTime": "14:30",
   "checkoutTime": "10:00",
   "foundedYear": 1988,
-  "totalRooms": 4,
-  "totalApartments": 2,
+  "totalRooms": 5,
+  "totalApartments": 3,
   "socials": {
     "instagram": "",
     "facebook": "",

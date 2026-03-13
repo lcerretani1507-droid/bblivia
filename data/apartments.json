@@ -1,60 +1,104 @@
 [
   {
-    "id": "appartamento-mare",
+    "id": "elba",
     "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80",
     "imageAlt": {
-      "it": "Appartamento vista mare con soggiorno spazioso",
-      "en": "Sea view apartment with spacious living room",
-      "de": "Apartment mit Meerblick und geräumigem Wohnzimmer"
+      "it": "Appartamento Elba al piano seminterrato con terrazza",
+      "en": "Elba Apartment on the lower ground floor with terrace",
+      "de": "Apartment Elba im Untergeschoss mit Terrasse"
     },
     "maxGuests": 4,
     "bedrooms": 2,
     "bathrooms": 1,
+    "floor": {
+      "it": "Seminterrato",
+      "en": "Lower ground floor",
+      "de": "Untergeschoss"
+    },
     "petsAllowed": true,
-    "amenities": ["wifi", "ac", "tv", "kitchen", "washing-machine", "sea-view", "private-bath"],
+    "amenities": ["ac", "tv", "kitchen", "washing-machine", "terrace", "private-bath"],
     "name": {
-      "it": "Appartamento Vista Mare",
-      "en": "Sea View Apartment",
-      "de": "Apartment mit Meerblick"
+      "it": "Appartamento Elba",
+      "en": "Elba Apartment",
+      "de": "Apartment Elba"
     },
     "shortDescription": {
-      "it": "Bilocale fronte mare per 4 persone, animali ammessi",
-      "en": "Two-bedroom seafront apartment for 4, pets welcome",
-      "de": "Zweizimmerwohnung am Meer für 4 Personen, Haustiere erlaubt"
+      "it": "Seminterrato, 2 camere da letto, terrazza privata, fino a 4 persone",
+      "en": "Lower ground floor, 2 bedrooms, private terrace, up to 4 guests",
+      "de": "Untergeschoss, 2 Schlafzimmer, private Terrasse, bis zu 4 Gäste"
     },
     "description": {
-      "it": "Il nostro Appartamento Vista Mare è una soluzione ideale per famiglie o gruppi di amici. Completamente accessoriato, si trova a pochi metri dalla spiaggia con una splendida vista sul mare. Dispone di 2 camere da letto, cucina attrezzata, bagno completo, lavatrice, aria condizionata, Wi-Fi e TV. Gli animali domestici di piccola taglia sono benvenuti. La prima colazione non è inclusa ma è disponibile su richiesta.",
-      "en": "Our Sea View Apartment is the perfect solution for families or groups of friends. Fully equipped and located just metres from the beach with a stunning sea view. It features 2 bedrooms, a fully equipped kitchen, bathroom, washing machine, air conditioning, Wi-Fi, and TV. Small pets are welcome. Breakfast is not included but available on request.",
-      "de": "Unser Apartment mit Meerblick ist die ideale Lösung für Familien oder Freundesgruppen. Vollständig ausgestattet und nur wenige Meter vom Strand entfernt mit atemberaubendem Meerblick. 2 Schlafzimmer, voll ausgestattete Küche, Bad, Waschmaschine, Klimaanlage, WLAN und TV. Kleine Haustiere willkommen. Frühstück nicht inbegriffen, auf Anfrage verfügbar."
+      "it": "L'Appartamento Elba si trova al piano seminterrato ed è composto da 2 camere da letto, bagno privato, cucina completamente attrezzata, soggiorno e una terrazza privata dove poter mangiare all'aperto. Dispone di aria condizionata, TV e lavatrice. Animali domestici di piccola taglia benvenuti. Gli appartamenti si trovano nello stesso edificio, a circa 50 metri dal B&B e a meno di 100 metri dalla spiaggia. La prenotazione avviene inviando una mail a info@bblivia.com.",
+      "en": "The Elba Apartment is on the lower ground floor and comprises 2 bedrooms, a private bathroom, a fully equipped kitchen, a living room, and a private terrace perfect for outdoor dining. Features air conditioning, TV, and washing machine. Small pets are welcome. The apartments are all in the same building, approximately 50 metres from the B&B and less than 100 metres from the beach. To book, send an email to info@bblivia.com.",
+      "de": "Das Apartment Elba befindet sich im Untergeschoss und umfasst 2 Schlafzimmer, ein eigenes Bad, eine voll ausgestattete Küche, ein Wohnzimmer und eine private Terrasse zum Essen im Freien. Ausstattung: Klimaanlage, TV und Waschmaschine. Kleine Haustiere willkommen. Alle Apartments befinden sich im selben Gebäude, ca. 50 m vom B&B und weniger als 100 m vom Strand entfernt. Buchung per E-Mail an info@bblivia.com."
     }
   },
   {
-    "id": "appartamento-giardino",
+    "id": "giglio",
     "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
     "imageAlt": {
-      "it": "Appartamento con giardino privato e terrazza",
-      "en": "Apartment with private garden and terrace",
-      "de": "Apartment mit Privatgarten und Terrasse"
+      "it": "Appartamento Giglio al piano rialzato con terrazza",
+      "en": "Giglio Apartment on the raised ground floor with terrace",
+      "de": "Apartment Giglio im Hochparterre mit Terrasse"
     },
-    "maxGuests": 6,
-    "bedrooms": 3,
-    "bathrooms": 2,
+    "maxGuests": 4,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "floor": {
+      "it": "Piano rialzato (3 scalini)",
+      "en": "Raised ground floor (3 steps)",
+      "de": "Hochparterre (3 Stufen)"
+    },
     "petsAllowed": true,
-    "amenities": ["wifi", "ac", "tv", "kitchen", "washing-machine", "garden", "private-bath", "parking"],
+    "amenities": ["ac", "tv", "kitchen", "washing-machine", "terrace", "private-bath"],
     "name": {
-      "it": "Appartamento con Giardino",
-      "en": "Garden Apartment",
-      "de": "Garten-Apartment"
+      "it": "Appartamento Giglio",
+      "en": "Giglio Apartment",
+      "de": "Apartment Giglio"
     },
     "shortDescription": {
-      "it": "Trilocale con giardino privato per 6 persone, animali ammessi",
-      "en": "Three-bedroom apartment with private garden for 6, pets welcome",
-      "de": "Dreizimmerwohnung mit Privatgarten für 6 Personen, Haustiere erlaubt"
+      "it": "Piano rialzato, 1 camera matrimoniale + divano letto, terrazza privata, fino a 4 persone",
+      "en": "Raised ground floor, 1 double room + sofa bed, private terrace, up to 4 guests",
+      "de": "Hochparterre, 1 Doppelzimmer + Schlafsofa, private Terrasse, bis zu 4 Gäste"
     },
     "description": {
-      "it": "L'Appartamento con Giardino è la scelta perfetta per grandi famiglie o gruppi. Spazioso e confortevole, con un delizioso giardino privato dove rilassarsi all'aria aperta. Dispone di 3 camere da letto, 2 bagni, cucina completamente attrezzata, lavatrice, aria condizionata, Wi-Fi e TV. Parcheggio privato incluso. Animali domestici di piccola taglia benvenuti. A pochi minuti a piedi dalla spiaggia.",
-      "en": "The Garden Apartment is the perfect choice for larger families or groups. Spacious and comfortable, with a lovely private garden for outdoor relaxation. Features 3 bedrooms, 2 bathrooms, a fully equipped kitchen, washing machine, air conditioning, Wi-Fi, and TV. Private parking included. Small pets welcome. Just a few minutes' walk from the beach.",
-      "de": "Das Garten-Apartment ist die perfekte Wahl für größere Familien oder Gruppen. Geräumig und komfortabel, mit einem wunderschönen Privatgarten für Entspannung im Freien. 3 Schlafzimmer, 2 Bäder, vollausgestattete Küche, Waschmaschine, Klimaanlage, WLAN und TV. Privatparkplatz inklusive. Kleine Haustiere willkommen. Nur wenige Gehminuten vom Strand."
+      "it": "L'Appartamento Giglio si trova al piano rialzato (3 scalini) ed è composto da una camera da letto matrimoniale, un letto singolo, un comodo divano letto in soggiorno, bagno privato, cucina completamente attrezzata e una terrazza privata dove poter mangiare all'aperto. Dispone di aria condizionata, TV e lavatrice. Animali domestici di piccola taglia benvenuti. Gli appartamenti si trovano nello stesso edificio, a circa 50 metri dal B&B e a meno di 100 metri dalla spiaggia. La prenotazione avviene inviando una mail a info@bblivia.com.",
+      "en": "The Giglio Apartment is on the raised ground floor (3 steps) and comprises a double bedroom, a single bed, a comfortable sofa bed in the living room, a private bathroom, a fully equipped kitchen, and a private terrace perfect for outdoor dining. Features air conditioning, TV, and washing machine. Small pets are welcome. All apartments are in the same building, approximately 50 metres from the B&B and less than 100 metres from the beach. To book, send an email to info@bblivia.com.",
+      "de": "Das Apartment Giglio befindet sich im Hochparterre (3 Stufen) und umfasst ein Doppelschlafzimmer, ein Einzelbett, ein bequemes Schlafsofa im Wohnzimmer, ein eigenes Bad, eine voll ausgestattete Küche und eine private Terrasse zum Essen im Freien. Ausstattung: Klimaanlage, TV und Waschmaschine. Kleine Haustiere willkommen. Alle Apartments befinden sich im selben Gebäude, ca. 50 m vom B&B und weniger als 100 m vom Strand entfernt. Buchung per E-Mail an info@bblivia.com."
+    }
+  },
+  {
+    "id": "montecristo",
+    "image": "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&q=80",
+    "imageAlt": {
+      "it": "Appartamento Montecristo al secondo piano con terrazza",
+      "en": "Montecristo Apartment on the second floor with terrace",
+      "de": "Apartment Montecristo im zweiten Stock mit Terrasse"
+    },
+    "maxGuests": 4,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "floor": {
+      "it": "Secondo piano",
+      "en": "Second floor",
+      "de": "Zweiter Stock"
+    },
+    "petsAllowed": true,
+    "amenities": ["ac", "tv", "kitchen", "washing-machine", "terrace", "private-bath"],
+    "name": {
+      "it": "Appartamento Montecristo",
+      "en": "Montecristo Apartment",
+      "de": "Apartment Montecristo"
+    },
+    "shortDescription": {
+      "it": "Secondo piano, 1 camera matrimoniale + divano letto, terrazza privata, fino a 4 persone",
+      "en": "Second floor, 1 double room + sofa bed, private terrace, up to 4 guests",
+      "de": "Zweiter Stock, 1 Doppelzimmer + Schlafsofa, private Terrasse, bis zu 4 Gäste"
+    },
+    "description": {
+      "it": "L'Appartamento Montecristo si trova al secondo piano ed è composto da una camera da letto matrimoniale, un letto singolo, un comodo divano letto in soggiorno, bagno privato, cucina completamente attrezzata e una terrazza privata dove poter mangiare all'aperto. Dispone di aria condizionata, TV e lavatrice. Animali domestici di piccola taglia benvenuti. Gli appartamenti si trovano nello stesso edificio, a circa 50 metri dal B&B e a meno di 100 metri dalla spiaggia. La prenotazione avviene inviando una mail a info@bblivia.com.",
+      "en": "The Montecristo Apartment is on the second floor and comprises a double bedroom, a single bed, a comfortable sofa bed in the living room, a private bathroom, a fully equipped kitchen, and a private terrace perfect for outdoor dining. Features air conditioning, TV, and washing machine. Small pets are welcome. All apartments are in the same building, approximately 50 metres from the B&B and less than 100 metres from the beach. To book, send an email to info@bblivia.com.",
+      "de": "Das Apartment Montecristo befindet sich im zweiten Stock und umfasst ein Doppelschlafzimmer, ein Einzelbett, ein bequemes Schlafsofa im Wohnzimmer, ein eigenes Bad, eine voll ausgestattete Küche und eine private Terrasse zum Essen im Freien. Ausstattung: Klimaanlage, TV und Waschmaschine. Kleine Haustiere willkommen. Alle Apartments befinden sich im selben Gebäude, ca. 50 m vom B&B und weniger als 100 m vom Strand entfernt. Buchung per E-Mail an info@bblivia.com."
     }
   }
 ]

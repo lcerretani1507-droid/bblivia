@@ -29,6 +29,7 @@
     "checkAvailability": "Verifica disponibilità",
     "bookRoom": "Prenota questa camera",
     "bookApartment": "Prenota questo appartamento",
+    "bookApartmentEmail": "Prenota via email",
     "viewAll": "Vedi tutte",
     "viewAllRooms": "Vedi tutte le camere",
     "viewAllApartments": "Vedi tutti gli appartamenti"
@@ -42,7 +43,7 @@
     "roomsTitle": "Le Camere",
     "roomsSubtitle": "In coppia, tra amici o in famiglia… troveremo la camera più adatta a voi",
     "apartmentsTitle": "Gli Appartamenti",
-    "apartmentsSubtitle": "Spazi indipendenti per soggiorni lunghi e famiglie numerose",
+    "apartmentsSubtitle": "Tre appartamenti indipendenti, a 50 metri dal B&B, fino a 4 posti letto",
     "surroundingsTitle": "I Dintorni",
     "surroundingsSubtitle": "Nel cuore pulsante della Maremma Toscana",
     "surroundingsText": "Castiglione della Pescaia, con le 5 Vele di Legambiente e la Bandiera Blu d'Europa, è una delle principali mete turistiche del Touring Club. Natura, cultura, enogastronomia e borghi medievali a portata di mano.",
@@ -62,39 +63,43 @@
     "section2Title": "I nostri valori",
     "section2Text": "Cortesia, comfort e cordialità sono le nostre parole chiave. Trasformare la tua vacanza in un momento indimenticabile è il nostro obiettivo. Il suono del mare sarà il sottofondo del tuo soggiorno.",
     "section3Title": "Le camere e gli appartamenti",
-    "section3Text": "Ambienti completamente ristrutturati, spazi confortevoli adatti a coppie, famiglie e gruppi. Tutte le camere dispongono di aria condizionata, Wi-Fi, TV, frigorifero e bagno privato. La colazione, servita nella sala principale affacciata sul mare, è sempre inclusa nel prezzo. Parcheggio privato garantito.",
+    "section3Text": "Ambienti completamente ristrutturati, spazi confortevoli adatti a coppie e famiglie. Tutte le camere dispongono di aria condizionata, Wi-Fi, TV, frigorifero e bagno privato. La colazione, servita nella sala principale affacciata sul mare, è sempre inclusa nelle camere B&B. Parcheggio privato garantito. I 3 appartamenti si trovano a 50 metri dal B&B.",
     "factBoxTitle": "In breve",
     "fact1": "Fronte mare con accesso diretto alla spiaggia",
-    "fact2": "4 camere e 2 appartamenti",
+    "fact2": "5 camere e 3 appartamenti (a 50 metri dal B&B)",
     "fact3": "Colazione inclusa (nelle camere B&B)",
-    "fact4": "Parcheggio privato gratuito",
-    "fact5": "Wi-Fi gratuito in tutta la struttura",
+    "fact4": "Parcheggio privato gratuito (solo B&B)",
+    "fact5": "Wi-Fi gratuito in tutta la struttura del B&B",
     "fact6": "A 9 minuti a piedi dal centro"
   },
 
   "rooms": {
     "title": "Le Camere",
-    "metaDescription": "Scopri le camere del nostro B&B a Castiglione della Pescaia: camere matrimoniali con vista mare, balconcino, aria condizionata e colazione inclusa.",
+    "metaDescription": "Scopri le 5 camere del B&B da Livia a Castiglione della Pescaia: camere matrimoniali con vista mare, bagno privato, aria condizionata e colazione inclusa.",
     "hero": "Le Camere",
     "subtitle": "Ambienti ristrutturati, comfort moderni, vista sul mare",
-    "intro": "Le nostre camere sono affacciate direttamente sul mare. Dispongono tutte di aria condizionata, Wi-Fi gratuito, TV, frigorifero e bagno privato. La colazione, servita nella sala principale con vista mare, è sempre inclusa. Parcheggio privato garantito. Le nostre camere possono ospitare fino a 3 persone.",
+    "intro": "Le nostre camere sono affacciate direttamente sul mare. Dispongono tutte di aria condizionata, Wi-Fi gratuito, TV, frigorifero e bagno privato con phon. La colazione, servita nella sala principale con vista mare, è sempre inclusa. Parcheggio privato garantito.",
+    "terraceNote": "Le camere Comfort e Classic con Balconcino dispongono di un terrazzino privato. Non tutte le camere hanno il terrazzino.",
     "amenitiesTitle": "Servizi inclusi in tutte le camere",
     "maxGuests": "Fino a {n} ospiti",
-    "faqTitle": "Domande frequenti sulle camere"
+    "faqTitle": "Domande frequenti sulle camere",
+    "privateBathNote": "Ogni camera dispone di bagno privato con phon, saponi e asciugamani."
   },
 
   "apartments": {
     "title": "Gli Appartamenti",
-    "metaDescription": "Appartamenti fronte mare a Castiglione della Pescaia per famiglie e gruppi. Cucina attrezzata, animali ammessi, parcheggio privato.",
+    "metaDescription": "Tre appartamenti a Castiglione della Pescaia, a 50 metri dal B&B da Livia e meno di 100 metri dalla spiaggia. Cucina attrezzata, terrazza privata, animali ammessi. Prenota via email.",
     "hero": "Gli Appartamenti",
-    "subtitle": "Indipendenza e comfort a pochi passi dalla spiaggia",
-    "intro": "I nostri appartamenti sono interamente accessoriati e si trovano a pochi metri dalla spiaggia. Sono la soluzione ideale per famiglie numerose o soggiorni più lunghi. Negli appartamenti sono ammessi animali domestici di piccola taglia.",
+    "subtitle": "Tre appartamenti indipendenti con terrazza, a 50 metri dal B&B",
+    "intro": "I nostri 3 appartamenti — Elba, Giglio e Montecristo — si trovano nello stesso edificio, a circa 50 metri dal B&B e a meno di 100 metri dalla spiaggia. Ogni appartamento è dotato di cucina completamente attrezzata, terrazza privata dove poter mangiare all'aperto, aria condizionata e bagno privato. Non è disponibile il Wi-Fi e non c'è parcheggio privato. Animali domestici di piccola taglia benvenuti. Per prenotare, scrivete a info@bblivia.com.",
+    "bookingNote": "Per prenotare gli appartamenti, inviare una mail a",
     "maxGuests": "Fino a {n} ospiti",
     "bedrooms": "{n} camere da letto",
     "bathrooms": "{n} bagni",
     "petsAllowed": "Animali ammessi",
     "petsNotAllowed": "Animali non ammessi",
-    "faqTitle": "Domande frequenti sugli appartamenti"
+    "faqTitle": "Domande frequenti sugli appartamenti",
+    "floorLabel": "Piano"
   },
 
   "surroundings": {
@@ -125,7 +130,7 @@
 
   "book": {
     "title": "Prenota",
-    "metaDescription": "Prenota direttamente la tua camera o appartamento al nostro B&B a Castiglione della Pescaia. Verifica disponibilità e tariffe online.",
+    "metaDescription": "Prenota direttamente la tua camera al B&B da Livia a Castiglione della Pescaia. Verifica disponibilità e tariffe online.",
     "hero": "Prenota il tuo soggiorno",
     "backToSite": "Torna al sito"
   },
@@ -145,6 +150,7 @@
     "private-bath": "Bagno privato",
     "sea-view": "Vista mare",
     "balcony": "Balconcino",
+    "terrace": "Terrazza privata",
     "kitchen": "Cucina attrezzata",
     "washing-machine": "Lavatrice",
     "garden": "Giardino privato",

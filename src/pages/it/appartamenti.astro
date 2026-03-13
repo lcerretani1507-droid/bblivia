@@ -1,7 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ApartmentCard from '../../components/ApartmentCard.astro';
-import BookingCTA from '../../components/BookingCTA.astro';
 import FAQ from '../../components/FAQ.astro';
 import { useTranslations } from '../../i18n/utils';
 import config from '../../../data/config.json';
@@ -10,7 +9,7 @@ import faqData from '../../../data/faq.json';
 
 const lang = 'it';
 const t = useTranslations(lang);
-const aptFaqs = faqData.filter(f => ['animali', 'checkin-checkout', 'bagagli', 'distanza-mare'].includes(f.id));
+const aptFaqs = faqData.filter(f => ['animali', 'checkin-checkout', 'bagagli', 'wifi-appartamenti', 'parcheggio'].includes(f.id));
 
 const aptSchemas = apartments.map(apt => ({
   "@context": "https://schema.org",
@@ -23,47 +22,69 @@ const aptSchemas = apartments.map(apt => ({
   "occupancy": { "@type": "QuantitativeValue", "maxValue": apt.maxGuests },
   "petsAllowed": apt.petsAllowed,
   "amenityFeature": apt.amenities.map(a => ({ "@type": "LocationFeatureSpecification", "name": t.amenities[a as keyof typeof t.amenities] ?? a, "value": true })),
-  "potentialAction": { "@type": "ReserveAction", "target": { "@type": "EntryPoint", "urlTemplate": config.siteUrl + t.routes.book } }
+  "potentialAction": { "@type": "ReserveAction", "target": { "@type": "EntryPoint", "urlTemplate": `mailto:${config.email}` } }
 }));
 ---
 
 <Layout lang={lang} routeName="apartments" title={t.apartments.title} description={t.apartments.metaDescription} extraSchemas={aptSchemas}
   breadcrumbs={[{ name: 'Home', url: config.siteUrl + t.routes.home },{ name: t.apartments.title, url: config.siteUrl + t.routes.apartments }]}>
-  <section class="relative h-64 sm:h-80 flex items-center justify-center overflow-hidden -mt-20">
+
+  <!-- Hero -->
+  <section class="relative h-56 sm:h-72 flex items-center justify-center overflow-hidden -mt-20">
     <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=80" alt="Appartamenti fronte mare Castiglione della Pescaia" class="w-full h-full object-cover" />
+      <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=80" alt="Appartamenti Castiglione della Pescaia" class="w-full h-full object-cover" fetchpriority="high" />
       <div class="absolute inset-0 bg-sea-900/55"></div>
     </div>
     <div class="relative z-10 text-center text-white px-4">
-      <h1 class="font-serif text-4xl sm:text-5xl font-bold drop-shadow-md mb-3">{t.apartments.hero}</h1>
-      <p class="text-white/80 text-lg">{t.apartments.subtitle}</p>
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold drop-shadow-md mb-3">{t.apartments.hero}</h1>
+      <p class="text-white/80 text-base sm:text-lg">{t.apartments.subtitle}</p>
     </div>
   </section>
 
-  <!-- Pets welcome banner -->
+  <!-- Info banner -->
   <section class="bg-sand-100 border-b border-sand-200 py-4 px-4">
-    <div class="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-sea-800">
+    <div class="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-sea-800">
       <span class="flex items-center gap-1.5">🐾 {t.apartments.petsAllowed}</span>
       <span class="flex items-center gap-1.5">🍳 {t.amenities['kitchen']}</span>
-      <span class="flex items-center gap-1.5">🌊 {t.amenities['sea-view']}</span>
-      <span class="flex items-center gap-1.5">🚗 {t.amenities['parking']}</span>
+      <span class="flex items-center gap-1.5">🏖️ A meno di 100m dalla spiaggia</span>
+      <span class="flex items-center gap-1.5">🌿 {t.amenities['terrace']}</span>
     </div>
   </section>
 
-  <section class="py-12 px-4 bg-warm-100">
+  <!-- Intro -->
+  <section class="py-10 px-4 bg-warm-100">
     <div class="max-w-3xl mx-auto text-center">
       <p class="text-sea-700 text-lg leading-relaxed">{t.apartments.intro}</p>
     </div>
   </section>
 
-  <section class="py-12 px-4 pb-20 bg-warm-100">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
+  <!-- Apartment cards -->
+  <section class="py-4 px-4 pb-16 bg-warm-100">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {apartments.map(apt => <ApartmentCard apartment={apt} lang={lang} />)}
     </div>
   </section>
 
-  <BookingCTA lang={lang} />
+  <!-- Email CTA -->
+  <section class="bg-sea-700 text-white py-14 px-4">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold mb-4">Prenota il tuo appartamento</h2>
+      <p class="text-white/75 text-base sm:text-lg mb-8 max-w-lg mx-auto">
+        Gli appartamenti non si prenotano online. Scrivici una mail e ti risponderemo al più presto.
+      </p>
+      <a
+        href="mailto:info@bblivia.com?subject=Richiesta%20prenotazione%20appartamento"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-sand-400 hover:bg-sand-300 text-sea-900 font-bold rounded-full text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform min-h-[52px]"
+      >
+        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        info@bblivia.com
+      </a>
+    </div>
+  </section>
 
+  <!-- FAQ -->
   <section class="py-16 px-4 bg-warm-100">
     <div class="max-w-3xl mx-auto">
       <h2 class="font-serif text-2xl font-bold text-sea-900 mb-8 text-center">{t.apartments.faqTitle}</h2>
