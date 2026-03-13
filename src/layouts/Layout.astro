@@ -1,0 +1,133 @@
+---
+import config from '../../data/config.json';
+import type { Lang, RouteName } from '../i18n/utils';
+import { useTranslations, getHreflangs, allRoutes } from '../i18n/utils';
+import SchemaOrg from '../components/SchemaOrg.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  lang: Lang;
+  routeName: RouteName;
+  title: string;
+  description: string;
+  ogImage?: string;
+  extraSchemas?: object[];
+  breadcrumbs?: { name: string; url: string }[];
+}
+
+const {
+  lang,
+  routeName,
+  title,
+  description,
+  ogImage = '/images/og-default.jpg',
+  extraSchemas = [],
+  breadcrumbs,
+} = Astro.props;
+
+const t = useTranslations(lang);
+const hreflangs = getHreflangs(routeName, config.siteUrl);
+const canonicalUrl = config.siteUrl + allRoutes[routeName][lang];
+const fullOgImage = config.siteUrl + ogImage;
+const fullTitle = `${title}${t.meta.separator}${config.propertyName}`;
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0f4459" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Hreflang -->
+    {hreflangs.map(h => (
+      <link rel="alternate" hreflang={h.lang} href={h.href} />
+    ))}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={config.propertyName} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={t.ogLocale} />
+    {hreflangs
+      .filter(h => h.lang !== lang && h.lang !== 'x-default')
+      .map(h => <meta property="og:locale:alternate" content={
+        h.lang === 'it' ? 'it_IT' : h.lang === 'en' ? 'en_US' : 'de_DE'
+      } />)
+    }
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullOgImage} />
+
+    <!-- Geo Tags (ICBM) -->
+    <meta name="geo.region" content="IT-GR" />
+    <meta name="geo.placename" content="Castiglione della Pescaia" />
+    <meta name="geo.position" content={`${config.coordinates.lat};${config.coordinates.lng}`} />
+    <meta name="ICBM" content={`${config.coordinates.lat}, ${config.coordinates.lng}`} />
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content={fullTitle} />
+    <meta name="DC.creator" content={config.propertyName} />
+    <meta name="DC.subject" content="Bed and Breakfast, Castiglione della Pescaia, Maremma Toscana" />
+    <meta name="DC.description" content={description} />
+    <meta name="DC.language" content={lang} />
+    <meta name="DC.type" content="Service" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured Data -->
+    <SchemaOrg
+      lang={lang}
+      routeName={routeName}
+      pageTitle={fullTitle}
+      pageDescription={description}
+      breadcrumbs={breadcrumbs}
+      extraSchemas={extraSchemas}
+    />
+  </head>
+  <body class="bg-warm-100 text-sea-900 font-sans antialiased pb-14 lg:pb-0">
+    <Header lang={lang} routeName={routeName} />
+    <main>
+      <slot />
+    </main>
+    <Footer lang={lang} />
+
+    <!-- Sticky mobile Book CTA -->
+    {routeName !== 'book' && (
+      <a
+        href={useTranslations(lang).routes.book}
+        id="sticky-cta"
+        class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-sand-400 text-sea-900 px-4 py-4 flex items-center justify-center gap-2 font-bold text-base shadow-lg transition-transform duration-300"
+        aria-label="Book now"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        {useTranslations(lang).cta.bookNow}
+      </a>
+    )}
+  </body>
+</html>

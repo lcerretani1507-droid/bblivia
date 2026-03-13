@@ -1,0 +1,66 @@
+# B&B [PROPERTY_NAME]
+
+> Family-run Bed & Breakfast in Castiglione della Pescaia, Maremma Toscana, Italy. Direct seafront location since [YEAR].
+
+## Overview
+
+B&B [PROPERTY_NAME] is a family-run bed and breakfast located directly on the seafront in Castiglione della Pescaia, in the Maremma Toscana region of Tuscany, Italy. The property has been welcoming guests since [YEAR] and offers 4 B&B rooms and 2 self-catering apartments.
+
+The property is located at [ADDRESS], 58043 Castiglione della Pescaia (GR), Italy. Coordinates: [LAT], [LNG]. The town centre is a 9-minute walk away.
+
+## Rooms (4 total, max 3 guests each)
+
+- **Standard Room**: Double room with private balcony. Air conditioning, TV, mini fridge, free WiFi, private bathroom.
+- **Classic Room**: Double room with lateral sea view. Air conditioning, TV, mini fridge, free WiFi, private bathroom.
+- **Classic with Balcony**: Double room with balcony and sea view. Air conditioning, TV, mini fridge, free WiFi, private bathroom.
+- **Superior Sea View**: Double or triple room with frontal sea view. Air conditioning, TV, mini fridge, free WiFi, private bathroom.
+
+All B&B rooms include breakfast served in the main dining room overlooking the sea. No pets in B&B rooms.
+
+## Apartments (2 total)
+
+- **Sea View Apartment**: 2 bedrooms, 1 bathroom, max 4 guests. Fully equipped kitchen, washing machine, AC, WiFi, TV, sea view. **Pets allowed (small)**.
+- **Garden Apartment**: 3 bedrooms, 2 bathrooms, max 6 guests. Fully equipped kitchen, washing machine, AC, WiFi, TV, private garden, private parking. **Pets allowed (small)**. Walking distance to beach.
+
+## Amenities (all accommodations)
+
+Free WiFi throughout, air conditioning, private parking (free, gated courtyard), direct beach access (B&B rooms), TV, mini fridge / kitchen
+
+## Key Facts
+
+- Check-in: 14:30–18:00
+- Check-out: by 10:00
+- Breakfast: included in B&B room rate, served in sea-view dining room
+- Parking: free, private, gated, not supervised
+- Pets: not allowed in B&B rooms; small pets welcome in apartments
+- Languages spoken: Italian, English, German
+- Payment: cash and credit card accepted, currency EUR
+
+## Location & Surroundings
+
+Castiglione della Pescaia, 22 km from Grosseto, awarded 5 Sails (Legambiente) and European Blue Flag. The property has direct private beach access.
+
+Nearby:
+- Diaccia Botrona nature reserve: 8 min walk (birdwatching, wetlands)
+- Rocchette beach: 12 min drive
+- Cala Violina beach: 14 min drive (quartz sand, nature reserve)
+- Fattoria Le Mortelle winery (Antinori): 11 min drive
+- Punta Ala beach: 19 min drive
+- Parco dell'Uccellina (WWF): 60 min drive
+- Tarot Garden (Niki de Saint Phalle): 60 min drive
+
+## Contact
+
+- Phone: [PHONE]
+- Email: [EMAIL]
+- Address: [ADDRESS], 58043 Castiglione della Pescaia (GR), Italy
+
+## Booking
+
+Direct booking: https://www.example.com/en/book
+
+## More Information
+
+- Full site: https://www.example.com
+- Extended LLM data: https://www.example.com/llms-full.txt
+- Sitemap: https://www.example.com/sitemap-index.xml

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "checkin-checkout",
+    "question": {
+      "it": "Quali sono gli orari di check-in e check-out?",
+      "en": "What are the check-in and check-out times?",
+      "de": "Was sind die Check-in- und Check-out-Zeiten?"
+    },
+    "answer": {
+      "it": "Il check-in è dalle 14:30 alle 18:00. Il check-out deve avvenire entro le 10:00.",
+      "en": "Check-in is from 14:30 to 18:00. Check-out must be completed by 10:00.",
+      "de": "Der Check-in ist von 14:30 bis 18:00 Uhr. Der Check-out muss bis 10:00 Uhr erfolgen."
+    }
+  },
+  {
+    "id": "parcheggio",
+    "question": {
+      "it": "Il parcheggio è gratuito?",
+      "en": "Is parking free of charge?",
+      "de": "Ist das Parken kostenlos?"
+    },
+    "answer": {
+      "it": "Sì, il parcheggio privato è gratuito e riservato agli ospiti. Non è custodito ma si trova in un cortile privato con recinzione e cancello.",
+      "en": "Yes, private parking is free and reserved for guests. It is not supervised but is located in a private fenced courtyard with a gate.",
+      "de": "Ja, der Privatparkplatz ist kostenlos und für Gäste reserviert. Er wird nicht bewacht, befindet sich aber in einem eingezäunten Innenhof mit Tor."
+    }
+  },
+  {
+    "id": "distanza-mare",
+    "question": {
+      "it": "Quanto dista la struttura dal mare?",
+      "en": "How far is the property from the sea?",
+      "de": "Wie weit ist die Unterkunft vom Meer entfernt?"
+    },
+    "answer": {
+      "it": "La struttura è direttamente affacciata sul mare con accesso diretto alla spiaggia tramite un passaggio privato.",
+      "en": "The property is directly facing the sea with direct beach access via a private passage.",
+      "de": "Die Unterkunft liegt direkt am Meer mit direktem Strandzugang über einen privaten Durchgang."
+    }
+  },
+  {
+    "id": "distanza-centro",
+    "question": {
+      "it": "Quanto dista il centro del paese?",
+      "en": "How far is the town centre?",
+      "de": "Wie weit ist das Stadtzentrum entfernt?"
+    },
+    "answer": {
+      "it": "Il centro di Castiglione della Pescaia dista circa 9 minuti a piedi dalla struttura.",
+      "en": "The centre of Castiglione della Pescaia is about a 9-minute walk from the property.",
+      "de": "Das Zentrum von Castiglione della Pescaia ist etwa 9 Gehminuten von der Unterkunft entfernt."
+    }
+  },
+  {
+    "id": "animali",
+    "question": {
+      "it": "Sono ammessi animali domestici?",
+      "en": "Are pets allowed?",
+      "de": "Sind Haustiere erlaubt?"
+    },
+    "answer": {
+      "it": "Gli animali domestici non sono ammessi nelle camere del B&B. Tuttavia, negli appartamenti sono benvenuti animali domestici di piccola taglia.",
+      "en": "Pets are not allowed in the B&B rooms. However, small pets are welcome in the apartments.",
+      "de": "In den B&B-Zimmern sind keine Haustiere erlaubt. In den Apartments sind jedoch kleine Haustiere willkommen."
+    }
+  },
+  {
+    "id": "colazione",
+    "question": {
+      "it": "La colazione è inclusa nel prezzo?",
+      "en": "Is breakfast included in the price?",
+      "de": "Ist das Frühstück im Preis inbegriffen?"
+    },
+    "answer": {
+      "it": "Sì, la colazione è sempre inclusa nel prezzo delle camere del B&B. Viene servita nella sala principale affacciata sul mare.",
+      "en": "Yes, breakfast is always included in the price for B&B rooms. It is served in the main dining room overlooking the sea.",
+      "de": "Ja, das Frühstück ist immer im Zimmerpreis für B&B-Zimmer enthalten. Es wird im Hauptspeisesaal mit Meerblick serviert."
+    }
+  },
+  {
+    "id": "wifi",
+    "question": {
+      "it": "C'è il Wi-Fi gratuito?",
+      "en": "Is there free Wi-Fi?",
+      "de": "Gibt es kostenloses WLAN?"
+    },
+    "answer": {
+      "it": "Sì, la connessione Wi-Fi gratuita è disponibile in tutta la struttura.",
+      "en": "Yes, free Wi-Fi is available throughout the property.",
+      "de": "Ja, kostenloses WLAN ist im gesamten Objekt verfügbar."
+    }
+  },
+  {
+    "id": "bagagli",
+    "question": {
+      "it": "Posso lasciare i bagagli dopo il check-out?",
+      "en": "Can I leave my luggage after check-out?",
+      "de": "Kann ich mein Gepäck nach dem Check-out lassen?"
+    },
+    "answer": {
+      "it": "Sì, è possibile lasciare i bagagli dopo il check-out su richiesta.",
+      "en": "Yes, luggage storage after check-out is available on request.",
+      "de": "Ja, die Gepäckaufbewahrung nach dem Check-out ist auf Anfrage möglich."
+    }
+  }
+]

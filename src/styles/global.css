@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-warm-100 text-sea-900;
+  }
+
+  /* Remove default list styles in nav contexts */
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer components {
+  /* Sticky mobile booking CTA */
+  .sticky-book-cta {
+    @apply fixed bottom-0 left-0 right-0 z-40 lg:hidden;
+    @apply bg-sand-400 text-sea-900 px-4 py-3;
+    @apply flex items-center justify-center gap-2;
+    @apply font-bold text-base shadow-lg;
+    transition: transform 0.3s ease;
+  }
+
+  .sticky-book-cta.hidden-cta {
+    transform: translateY(100%);
+  }
+}
+
+@layer utilities {
+  /* Fix for bg-white/8 which may not work in Tailwind 3 without opacity utilities */
+  .bg-white\/8 {
+    background-color: rgb(255 255 255 / 0.08);
+  }
+}
+
+/* Animate bounce for scroll indicator */
+@keyframes bounce {
+  0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}

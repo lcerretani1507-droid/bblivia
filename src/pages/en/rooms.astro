@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RoomCard from '../../components/RoomCard.astro';
+import BookingCTA from '../../components/BookingCTA.astro';
+import FAQ from '../../components/FAQ.astro';
+import { useTranslations } from '../../i18n/utils';
+import config from '../../../data/config.json';
+import rooms from '../../../data/rooms.json';
+import faqData from '../../../data/faq.json';
+
+const lang = 'en';
+const t = useTranslations(lang);
+const roomFaqs = faqData.filter(f => ['colazione', 'animali', 'wifi', 'checkin-checkout'].includes(f.id));
+const hotelRoomSchemas = rooms.map(room => ({
+  "@context": "https://schema.org",
+  "@type": "HotelRoom",
+  "name": room.name[lang],
+  "description": room.description[lang],
+  "image": room.image,
+  "occupancy": { "@type": "QuantitativeValue", "maxValue": room.maxGuests },
+  "amenityFeature": room.amenities.map(a => ({ "@type": "LocationFeatureSpecification", "name": t.amenities[a as keyof typeof t.amenities] ?? a, "value": true })),
+  "bed": { "@type": "BedDetails", "typeOfBed": { "@type": "BedType", "name": room.bedType[lang] }, "numberOfBeds": room.numberOfBeds },
+  "potentialAction": { "@type": "ReserveAction", "target": { "@type": "EntryPoint", "urlTemplate": config.siteUrl + t.routes.book } }
+}));
+---
+
+<Layout lang={lang} routeName="rooms" title={t.rooms.title} description={t.rooms.metaDescription} extraSchemas={hotelRoomSchemas}
+  breadcrumbs={[{ name: 'Home', url: config.siteUrl + t.routes.home },{ name: t.rooms.title, url: config.siteUrl + t.routes.rooms }]}>
+  <section class="relative h-64 sm:h-80 flex items-center justify-center overflow-hidden -mt-20">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=80" alt="B&B rooms Castiglione della Pescaia" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-sea-900/55"></div>
+    </div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="font-serif text-4xl sm:text-5xl font-bold drop-shadow-md mb-3">{t.rooms.hero}</h1>
+      <p class="text-white/80 text-lg">{t.rooms.subtitle}</p>
+    </div>
+  </section>
+  <section class="bg-sea-900 text-white py-5 px-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-white/80">
+      {Object.entries(t.amenities).slice(0, 7).map(([_, label]) => (
+        <span class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-sand-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          {label}
+        </span>
+      ))}
+    </div>
+  </section>
+  <section class="py-12 px-4 bg-warm-100">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sea-700 text-lg leading-relaxed">{t.rooms.intro}</p>
+    </div>
+  </section>
+  <section class="py-12 px-4 pb-20 bg-warm-100">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {rooms.map((room, i) => <RoomCard room={room} lang={lang} featured={i === 3} />)}
+    </div>
+  </section>
+  <BookingCTA lang={lang} />
+  <section class="py-16 px-4 bg-warm-100">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-serif text-2xl font-bold text-sea-900 mb-8 text-center">{t.rooms.faqTitle}</h2>
+      <FAQ lang={lang} items={roomFaqs} />
+    </div>
+  </section>
+</Layout>

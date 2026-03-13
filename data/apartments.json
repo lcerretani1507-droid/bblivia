@@ -1,0 +1,60 @@
+[
+  {
+    "id": "appartamento-mare",
+    "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80",
+    "imageAlt": {
+      "it": "Appartamento vista mare con soggiorno spazioso",
+      "en": "Sea view apartment with spacious living room",
+      "de": "Apartment mit Meerblick und geräumigem Wohnzimmer"
+    },
+    "maxGuests": 4,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "petsAllowed": true,
+    "amenities": ["wifi", "ac", "tv", "kitchen", "washing-machine", "sea-view", "private-bath"],
+    "name": {
+      "it": "Appartamento Vista Mare",
+      "en": "Sea View Apartment",
+      "de": "Apartment mit Meerblick"
+    },
+    "shortDescription": {
+      "it": "Bilocale fronte mare per 4 persone, animali ammessi",
+      "en": "Two-bedroom seafront apartment for 4, pets welcome",
+      "de": "Zweizimmerwohnung am Meer für 4 Personen, Haustiere erlaubt"
+    },
+    "description": {
+      "it": "Il nostro Appartamento Vista Mare è una soluzione ideale per famiglie o gruppi di amici. Completamente accessoriato, si trova a pochi metri dalla spiaggia con una splendida vista sul mare. Dispone di 2 camere da letto, cucina attrezzata, bagno completo, lavatrice, aria condizionata, Wi-Fi e TV. Gli animali domestici di piccola taglia sono benvenuti. La prima colazione non è inclusa ma è disponibile su richiesta.",
+      "en": "Our Sea View Apartment is the perfect solution for families or groups of friends. Fully equipped and located just metres from the beach with a stunning sea view. It features 2 bedrooms, a fully equipped kitchen, bathroom, washing machine, air conditioning, Wi-Fi, and TV. Small pets are welcome. Breakfast is not included but available on request.",
+      "de": "Unser Apartment mit Meerblick ist die ideale Lösung für Familien oder Freundesgruppen. Vollständig ausgestattet und nur wenige Meter vom Strand entfernt mit atemberaubendem Meerblick. 2 Schlafzimmer, voll ausgestattete Küche, Bad, Waschmaschine, Klimaanlage, WLAN und TV. Kleine Haustiere willkommen. Frühstück nicht inbegriffen, auf Anfrage verfügbar."
+    }
+  },
+  {
+    "id": "appartamento-giardino",
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
+    "imageAlt": {
+      "it": "Appartamento con giardino privato e terrazza",
+      "en": "Apartment with private garden and terrace",
+      "de": "Apartment mit Privatgarten und Terrasse"
+    },
+    "maxGuests": 6,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "petsAllowed": true,
+    "amenities": ["wifi", "ac", "tv", "kitchen", "washing-machine", "garden", "private-bath", "parking"],
+    "name": {
+      "it": "Appartamento con Giardino",
+      "en": "Garden Apartment",
+      "de": "Garten-Apartment"
+    },
+    "shortDescription": {
+      "it": "Trilocale con giardino privato per 6 persone, animali ammessi",
+      "en": "Three-bedroom apartment with private garden for 6, pets welcome",
+      "de": "Dreizimmerwohnung mit Privatgarten für 6 Personen, Haustiere erlaubt"
+    },
+    "description": {
+      "it": "L'Appartamento con Giardino è la scelta perfetta per grandi famiglie o gruppi. Spazioso e confortevole, con un delizioso giardino privato dove rilassarsi all'aria aperta. Dispone di 3 camere da letto, 2 bagni, cucina completamente attrezzata, lavatrice, aria condizionata, Wi-Fi e TV. Parcheggio privato incluso. Animali domestici di piccola taglia benvenuti. A pochi minuti a piedi dalla spiaggia.",
+      "en": "The Garden Apartment is the perfect choice for larger families or groups. Spacious and comfortable, with a lovely private garden for outdoor relaxation. Features 3 bedrooms, 2 bathrooms, a fully equipped kitchen, washing machine, air conditioning, Wi-Fi, and TV. Private parking included. Small pets welcome. Just a few minutes' walk from the beach.",
+      "de": "Das Garten-Apartment ist die perfekte Wahl für größere Familien oder Gruppen. Geräumig und komfortabel, mit einem wunderschönen Privatgarten für Entspannung im Freien. 3 Schlafzimmer, 2 Bäder, vollausgestattete Küche, Waschmaschine, Klimaanlage, WLAN und TV. Privatparkplatz inklusive. Kleine Haustiere willkommen. Nur wenige Gehminuten vom Strand."
+    }
+  }
+]

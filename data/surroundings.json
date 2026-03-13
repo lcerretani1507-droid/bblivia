@@ -1,0 +1,120 @@
+{
+  "beaches": [
+    {
+      "id": "cala-violina",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80",
+      "distance": "14 min",
+      "geo": { "lat": 42.888, "lng": 10.790 },
+      "name": { "it": "Cala Violina", "en": "Cala Violina", "de": "Cala Violina" },
+      "description": {
+        "it": "Una delle spiagge più affascinanti della Maremma Toscana. La sua sabbia finissima di quarzo, calpestata, emette un suono simile a quello delle corde di un violino. Si trova all'interno della Riserva Naturale delle Bandite di Scarlino.",
+        "en": "One of the most fascinating beaches in Maremma Toscana. Its fine quartz sand, when walked upon, produces a sound resembling violin strings. Located within the Bandite di Scarlino Nature Reserve.",
+        "de": "Einer der faszinierendsten Strände der Maremma Toscana. Sein feiner Quarzsand erzeugt beim Betreten ein Geräusch ähnlich dem von Geigensaiten. Liegt im Naturschutzgebiet Bandite di Scarlino."
+      }
+    },
+    {
+      "id": "punta-ala",
+      "image": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=700&q=80",
+      "distance": "19 min",
+      "geo": { "lat": 42.918, "lng": 10.740 },
+      "name": { "it": "Punta Ala", "en": "Punta Ala", "de": "Punta Ala" },
+      "description": {
+        "it": "Una delle spiagge più esclusive e rinomate della Toscana, con acque cristalline e una pineta lussureggiante alle spalle. Meta ideale per chi cerca tranquillità e natura incontaminata.",
+        "en": "One of the most exclusive and renowned beaches in Tuscany, with crystal-clear waters and a lush pine forest behind it. The ideal destination for those seeking peace and unspoilt nature.",
+        "de": "Einer der exklusivsten und bekanntesten Strände der Toskana, mit kristallklarem Wasser und einem üppigen Pinienwald dahinter. Das ideale Ziel für alle, die Ruhe und unberührte Natur suchen."
+      }
+    },
+    {
+      "id": "rocchette",
+      "image": "https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=700&q=80",
+      "distance": "12 min",
+      "geo": { "lat": 42.740, "lng": 10.920 },
+      "name": { "it": "Rocchette", "en": "Rocchette", "de": "Rocchette" },
+      "description": {
+        "it": "Una spiaggia selvaggia e suggestiva, immersa in una macchia mediterranea incontaminata. Ideale per lunghe passeggiate sulla riva e bagni in acque limpide.",
+        "en": "A wild and evocative beach surrounded by unspoilt Mediterranean scrub. Perfect for long walks along the shore and swimming in clear waters.",
+        "de": "Ein wilder und eindrucksvoller Strand, umgeben von unberührter mediterraner Macchia. Ideal für lange Spaziergänge am Ufer und Schwimmen in klarem Wasser."
+      }
+    }
+  ],
+  "attractions": [
+    {
+      "id": "diaccia-botrona",
+      "image": "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=700&q=80",
+      "distance": "8 min a piedi",
+      "geo": { "lat": 42.769, "lng": 10.895 },
+      "name": { "it": "Diaccia Botrona", "en": "Diaccia Botrona", "de": "Diaccia Botrona" },
+      "description": {
+        "it": "Una zona palustre a 8 minuti a piedi dalla struttura. Riserva naturale con un raro ecosistema, famosa per il birdwatching e per i tramonti mozzafiato tra acqua e cielo.",
+        "en": "A wetland area just 8 minutes' walk from the property. A nature reserve with a rare ecosystem, famous for birdwatching and breathtaking sunsets over water and sky.",
+        "de": "Ein Feuchtgebiet nur 8 Gehminuten von der Unterkunft entfernt. Ein Naturschutzgebiet mit einem seltenen Ökosystem, bekannt für Vogelbeobachtung und atemberaubende Sonnenuntergänge über Wasser und Himmel."
+      }
+    },
+    {
+      "id": "parco-uccellina",
+      "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=80",
+      "distance": "60 min",
+      "geo": { "lat": 42.653, "lng": 11.105 },
+      "name": { "it": "Parco dell'Uccellina", "en": "Parco dell'Uccellina", "de": "Parco dell'Uccellina" },
+      "description": {
+        "it": "Una riserva naturale protetta dal WWF, famosa per i panorami di fiorente vegetazione, le spiagge incontaminate e la fauna selvatica: cinghiali, caprioli e cavalli allo stato brado.",
+        "en": "A WWF protected nature reserve, famous for lush vegetation panoramas, unspoilt beaches, and wildlife including wild boar, deer, and free-roaming horses.",
+        "de": "Ein vom WWF geschütztes Naturschutzgebiet, bekannt für üppige Vegetationspanoramen, unberührte Strände und Wildtiere wie Wildschweine, Rehe und frei laufende Pferde."
+      }
+    }
+  ],
+  "culture": [
+    {
+      "id": "giardino-tarocchi",
+      "image": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=700&q=80",
+      "distance": "60 min",
+      "geo": { "lat": 42.444, "lng": 11.505 },
+      "name": { "it": "Giardino dei Tarocchi", "en": "Tarot Garden", "de": "Tarot-Garten" },
+      "description": {
+        "it": "Splendido parco artistico ideato da Niki de Saint Phalle, popolato di statue ispirate agli arcani maggiori dei tarocchi. Un'esperienza unica tra arte e natura.",
+        "en": "A splendid art park created by Niki de Saint Phalle, filled with sculptures inspired by the Major Arcana of the Tarot. A unique experience blending art and nature.",
+        "de": "Ein prächtiger Kunstpark, der von Niki de Saint Phalle geschaffen wurde und mit Skulpturen bevölkert ist, die von den großen Arkana des Tarots inspiriert sind. Ein einzigartiges Erlebnis zwischen Kunst und Natur."
+      }
+    }
+  ],
+  "food": [
+    {
+      "id": "le-mortelle",
+      "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=700&q=80",
+      "distance": "11 min",
+      "geo": { "lat": 42.756, "lng": 10.841 },
+      "name": { "it": "Fattoria Le Mortelle", "en": "Fattoria Le Mortelle", "de": "Weingut Le Mortelle" },
+      "description": {
+        "it": "Azienda vinicola della famiglia Antinori a pochi chilometri da Castiglione della Pescaia. Vini di qualità prodotti in una posizione straordinaria, in un ambiente di grande fascino.",
+        "en": "The Antinori family's winery just a few kilometres from Castiglione della Pescaia. Quality wines produced in an extraordinary location of great charm.",
+        "de": "Das Weingut der Familie Antinori nur wenige Kilometer von Castiglione della Pescaia entfernt. Qualitätsweine in einer außergewöhnlichen, zauberhaften Lage produziert."
+      }
+    }
+  ],
+  "villages": [
+    {
+      "id": "populonia",
+      "image": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=700&q=80",
+      "distance": "45 min",
+      "geo": { "lat": 42.988, "lng": 10.488 },
+      "name": { "it": "Populonia", "en": "Populonia", "de": "Populonia" },
+      "description": {
+        "it": "Piccolo borgo medievale del '400 sulla collina che sovrasta la spiaggia di Baratti. Dominato dalla Rocca massiccia, ospita anche un piccolo Museo Archeologico.",
+        "en": "A small 15th-century medieval village on the hill overlooking the beach of Baratti. Dominated by its massive fortress, it also houses a small Archaeological Museum.",
+        "de": "Ein kleines mittelalterliches Dorf aus dem 15. Jahrhundert auf dem Hügel über dem Strand von Baratti. Dominiert von seiner massiven Burg und beherbergt auch ein kleines Archäologisches Museum."
+      }
+    },
+    {
+      "id": "pitigliano",
+      "image": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=700&q=80",
+      "distance": "90 min",
+      "geo": { "lat": 42.636, "lng": 11.671 },
+      "name": { "it": "Pitigliano e Sorano", "en": "Pitigliano & Sorano", "de": "Pitigliano & Sorano" },
+      "description": {
+        "it": "Due piccoli borghi arroccati su una rupe tufacea nell'area del Tufo, con struttura tipicamente medievale e abitazioni scavate nella roccia. Un'esperienza unica nell'entroterra maremmano.",
+        "en": "Two small villages perched on a tufa cliff in the Tufa Area, with a typically medieval structure and dwellings carved into the rock. A unique experience in the Maremma hinterland.",
+        "de": "Zwei kleine Dörfer auf einer Tuffklippe in der Tuffgebiet-Region, mit typisch mittelalterlicher Struktur und in Fels gemeißelten Behausungen. Ein einzigartiges Erlebnis im Maremma-Hinterland."
+      }
+    }
+  ]
+}

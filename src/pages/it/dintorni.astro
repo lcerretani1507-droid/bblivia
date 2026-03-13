@@ -1,0 +1,166 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BookingCTA from '../../components/BookingCTA.astro';
+import { useTranslations } from '../../i18n/utils';
+import config from '../../../data/config.json';
+import surroundings from '../../../data/surroundings.json';
+
+const lang = 'it';
+const t = useTranslations(lang);
+
+const allAttractions = [
+  ...surroundings.beaches,
+  ...surroundings.attractions,
+  ...surroundings.culture,
+  ...surroundings.food,
+  ...surroundings.villages,
+];
+
+const touristAttractionSchemas = allAttractions.map(a => ({
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": a.name[lang],
+  "description": a.description[lang],
+  "image": a.image,
+  "geo": { "@type": "GeoCoordinates", "latitude": a.geo.lat, "longitude": a.geo.lng },
+}));
+---
+
+<Layout lang={lang} routeName="surroundings" title={t.surroundings.title} description={t.surroundings.metaDescription} extraSchemas={touristAttractionSchemas}
+  breadcrumbs={[{ name: 'Home', url: config.siteUrl + t.routes.home },{ name: t.surroundings.title, url: config.siteUrl + t.routes.surroundings }]}>
+  <!-- Hero -->
+  <section class="relative h-64 sm:h-80 flex items-center justify-center overflow-hidden -mt-20">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&q=80" alt="Dintorni Castiglione della Pescaia, Maremma Toscana" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-sea-900/50"></div>
+    </div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="font-serif text-4xl sm:text-5xl font-bold drop-shadow-md mb-3">{t.surroundings.hero}</h1>
+      <p class="text-white/80 text-lg">{t.surroundings.subtitle}</p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-12 px-4 bg-warm-100">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sea-700 text-lg leading-relaxed">{t.surroundings.intro}</p>
+    </div>
+  </section>
+
+  <!-- Beaches -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-serif text-3xl font-bold text-sea-900 mb-10 text-center">{t.surroundings.beachesTitle}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {surroundings.beaches.map(b => (
+          <article class="bg-warm-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div class="aspect-[16/9] overflow-hidden">
+              <img src={b.image} alt={b.name[lang]} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-serif text-lg font-bold text-sea-900">{b.name[lang]}</h3>
+                <span class="text-xs text-sea-500 bg-sea-50 border border-sea-100 px-2 py-0.5 rounded-full">🚗 {b.distance}</span>
+              </div>
+              <p class="text-sea-700 text-sm leading-relaxed">{b.description[lang]}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Natural Attractions -->
+  <section class="py-16 px-4 bg-warm-100">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-serif text-3xl font-bold text-sea-900 mb-10 text-center">{t.surroundings.attractionsTitle}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {surroundings.attractions.map(a => (
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col sm:flex-row">
+            <div class="sm:w-48 flex-shrink-0 overflow-hidden">
+              <img src={a.image} alt={a.name[lang]} class="w-full h-48 sm:h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-5 flex flex-col justify-center">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-serif text-lg font-bold text-sea-900">{a.name[lang]}</h3>
+                <span class="text-xs text-sea-500 bg-sea-50 border border-sea-100 px-2 py-0.5 rounded-full flex-shrink-0">🚶 {a.distance}</span>
+              </div>
+              <p class="text-sea-700 text-sm leading-relaxed">{a.description[lang]}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Culture -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-serif text-3xl font-bold text-sea-900 mb-10 text-center">{t.surroundings.cultureTitle}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-6 max-w-2xl mx-auto">
+        {surroundings.culture.map(c => (
+          <article class="bg-warm-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col sm:flex-row">
+            <div class="sm:w-64 flex-shrink-0 overflow-hidden">
+              <img src={c.image} alt={c.name[lang]} class="w-full h-48 sm:h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex flex-col justify-center">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-serif text-xl font-bold text-sea-900">{c.name[lang]}</h3>
+                <span class="text-xs text-sea-500 bg-sea-50 border border-sea-100 px-2 py-0.5 rounded-full flex-shrink-0">🚗 {c.distance}</span>
+              </div>
+              <p class="text-sea-700 leading-relaxed">{c.description[lang]}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Food & Wine -->
+  <section class="py-16 px-4 bg-warm-100">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-serif text-3xl font-bold text-sea-900 mb-10 text-center">{t.surroundings.foodTitle}</h2>
+      <div class="max-w-2xl mx-auto">
+        {surroundings.food.map(f => (
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col sm:flex-row">
+            <div class="sm:w-64 flex-shrink-0 overflow-hidden">
+              <img src={f.image} alt={f.name[lang]} class="w-full h-48 sm:h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex flex-col justify-center">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-serif text-xl font-bold text-sea-900">{f.name[lang]}</h3>
+                <span class="text-xs text-sea-500 bg-sea-50 border border-sea-100 px-2 py-0.5 rounded-full flex-shrink-0">🚗 {f.distance}</span>
+              </div>
+              <p class="text-sea-700 leading-relaxed">{f.description[lang]}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Villages -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-serif text-3xl font-bold text-sea-900 mb-10 text-center">{t.surroundings.villagesTitle}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {surroundings.villages.map(v => (
+          <article class="bg-warm-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div class="aspect-[16/9] overflow-hidden">
+              <img src={v.image} alt={v.name[lang]} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-serif text-lg font-bold text-sea-900">{v.name[lang]}</h3>
+                <span class="text-xs text-sea-500 bg-sea-50 border border-sea-100 px-2 py-0.5 rounded-full">🚗 {v.distance}</span>
+              </div>
+              <p class="text-sea-700 text-sm leading-relaxed">{v.description[lang]}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <BookingCTA lang={lang} />
+</Layout>

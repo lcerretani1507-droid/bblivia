@@ -1,0 +1,123 @@
+---
+import type { Lang, RouteName } from '../i18n/utils';
+import { useTranslations } from '../i18n/utils';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import config from '../../data/config.json';
+
+interface Props {
+  lang: Lang;
+  routeName: RouteName;
+}
+const { lang, routeName } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="site-header">
+  <div class="absolute inset-0 bg-sea-900/0 transition-colors duration-300" id="header-bg"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href={t.routes.home} class="flex-shrink-0 group">
+        <span class="font-serif text-xl font-bold text-white drop-shadow-md group-hover:text-sand-200 transition-colors">
+          {config.propertyName}
+        </span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+        <a href={t.routes.home} class="nav-link">{t.nav.home}</a>
+        <a href={t.routes.about} class="nav-link">{t.nav.about}</a>
+        <a href={t.routes.rooms} class="nav-link">{t.nav.rooms}</a>
+        <a href={t.routes.apartments} class="nav-link">{t.nav.apartments}</a>
+        <a href={t.routes.surroundings} class="nav-link">{t.nav.surroundings}</a>
+        <a href={t.routes.contact} class="nav-link">{t.nav.contact}</a>
+        <a href={t.routes.book} class="ml-2 px-5 py-2 bg-sand-400 hover:bg-sand-300 text-sea-900 font-semibold rounded-full text-sm transition-colors shadow-md">
+          {t.nav.book}
+        </a>
+        <div class="ml-3">
+          <LanguageSwitcher lang={lang} routeName={routeName} />
+        </div>
+      </nav>
+
+      <!-- Mobile: book + hamburger -->
+      <div class="flex lg:hidden items-center gap-3">
+        <a href={t.routes.book} class="px-4 py-1.5 bg-sand-400 hover:bg-sand-300 text-sea-900 font-semibold rounded-full text-sm transition-colors">
+          {t.nav.book}
+        </a>
+        <button
+          id="menu-toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          class="text-white p-2 rounded-md hover:bg-white/10 transition-colors"
+        >
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden hidden bg-sea-900/98 backdrop-blur-sm border-t border-white/10"
+  >
+    <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1" aria-label="Mobile navigation">
+      <a href={t.routes.home} class="mobile-nav-link">{t.nav.home}</a>
+      <a href={t.routes.about} class="mobile-nav-link">{t.nav.about}</a>
+      <a href={t.routes.rooms} class="mobile-nav-link">{t.nav.rooms}</a>
+      <a href={t.routes.apartments} class="mobile-nav-link">{t.nav.apartments}</a>
+      <a href={t.routes.surroundings} class="mobile-nav-link">{t.nav.surroundings}</a>
+      <a href={t.routes.contact} class="mobile-nav-link">{t.nav.contact}</a>
+      <div class="pt-2 pb-1">
+        <LanguageSwitcher lang={lang} routeName={routeName} mobile={true} />
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Spacer so content doesn't hide behind fixed header -->
+<div class="h-20"></div>
+
+<style>
+  .nav-link {
+    @apply px-3 py-2 text-white/90 hover:text-white text-sm font-medium rounded-md hover:bg-white/10 transition-colors;
+  }
+  .mobile-nav-link {
+    @apply px-4 py-3 text-white text-base font-medium rounded-md hover:bg-white/10 transition-colors block;
+  }
+</style>
+
+<script>
+  const header = document.getElementById('site-header');
+  const headerBg = document.getElementById('header-bg');
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  // Scroll-based header background
+  function updateHeader() {
+    const scrolled = window.scrollY > 60;
+    if (headerBg) {
+      headerBg.className = scrolled
+        ? 'absolute inset-0 bg-sea-900/95 backdrop-blur-sm transition-colors duration-300 shadow-lg'
+        : 'absolute inset-0 bg-sea-900/0 transition-colors duration-300';
+    }
+  }
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  updateHeader();
+
+  // Mobile menu toggle
+  menuToggle?.addEventListener('click', () => {
+    const isOpen = mobileMenu?.classList.contains('hidden') === false;
+    mobileMenu?.classList.toggle('hidden');
+    iconOpen?.classList.toggle('hidden', !isOpen);
+    iconClose?.classList.toggle('hidden', isOpen);
+    menuToggle?.setAttribute('aria-expanded', String(!isOpen));
+  });
+</script>

@@ -1,0 +1,160 @@
+{
+  "lang": "it",
+  "locale": "it-IT",
+  "ogLocale": "it_IT",
+
+  "nav": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "rooms": "Le Camere",
+    "apartments": "Gli Appartamenti",
+    "surroundings": "I Dintorni",
+    "contact": "Contatti",
+    "book": "Prenota"
+  },
+
+  "routes": {
+    "home": "/it/",
+    "about": "/it/chi-siamo",
+    "rooms": "/it/camere",
+    "apartments": "/it/appartamenti",
+    "surroundings": "/it/dintorni",
+    "contact": "/it/contatti",
+    "book": "/it/prenota"
+  },
+
+  "cta": {
+    "bookNow": "Prenota ora",
+    "discoverMore": "Scopri di più",
+    "checkAvailability": "Verifica disponibilità",
+    "bookRoom": "Prenota questa camera",
+    "bookApartment": "Prenota questo appartamento",
+    "viewAll": "Vedi tutte",
+    "viewAllRooms": "Vedi tutte le camere",
+    "viewAllApartments": "Vedi tutti gli appartamenti"
+  },
+
+  "home": {
+    "heroSubtitle": "Castiglione della Pescaia · Maremma Toscana",
+    "aboutTitle": "Chi Siamo",
+    "aboutSubtitle": "Ospitalità familiare dal 1988",
+    "aboutText": "Il nostro Bed & Breakfast a Castiglione della Pescaia rappresenta la nostra scelta di vita. Una struttura fronte mare, trasformata di generazione in generazione, che incarna il fascino dell'ospitalità tipica di un'attività a conduzione familiare. Cortesia, comfort e cordialità sono le nostre parole chiave.",
+    "roomsTitle": "Le Camere",
+    "roomsSubtitle": "In coppia, tra amici o in famiglia… troveremo la camera più adatta a voi",
+    "apartmentsTitle": "Gli Appartamenti",
+    "apartmentsSubtitle": "Spazi indipendenti per soggiorni lunghi e famiglie numerose",
+    "surroundingsTitle": "I Dintorni",
+    "surroundingsSubtitle": "Nel cuore pulsante della Maremma Toscana",
+    "surroundingsText": "Castiglione della Pescaia, con le 5 Vele di Legambiente e la Bandiera Blu d'Europa, è una delle principali mete turistiche del Touring Club. Natura, cultura, enogastronomia e borghi medievali a portata di mano.",
+    "reviewsTitle": "Cosa dicono i nostri ospiti",
+    "ctaBannerTitle": "Pronti per la vostra vacanza?",
+    "ctaBannerText": "Verificate la disponibilità e prenotate direttamente online.",
+    "contactTitle": "Contattateci",
+    "contactText": "Saremo lieti di rispondere ad ogni vostra domanda e aiutarvi a scegliere la soluzione più adatta."
+  },
+
+  "about": {
+    "title": "Chi Siamo",
+    "metaDescription": "Scopri la storia del nostro B&B a Castiglione della Pescaia: ospitalità familiare dal 1988, direttamente sul mare della Maremma Toscana.",
+    "hero": "La nostra storia",
+    "section1Title": "Una casa sul mare",
+    "section1Text": "Il nostro Bed & Breakfast a Castiglione della Pescaia rappresenta la nostra scelta di vita. Una vecchia casa fronte mare, trasformata di generazione in generazione, in una struttura moderna che incarna tutto il fascino dell'ospitalità tipica di un'attività a conduzione familiare.",
+    "section2Title": "I nostri valori",
+    "section2Text": "Cortesia, comfort e cordialità sono le nostre parole chiave. Trasformare la tua vacanza in un momento indimenticabile è il nostro obiettivo. Il suono del mare sarà il sottofondo del tuo soggiorno.",
+    "section3Title": "Le camere e gli appartamenti",
+    "section3Text": "Ambienti completamente ristrutturati, spazi confortevoli adatti a coppie, famiglie e gruppi. Tutte le camere dispongono di aria condizionata, Wi-Fi, TV, frigorifero e bagno privato. La colazione, servita nella sala principale affacciata sul mare, è sempre inclusa nel prezzo. Parcheggio privato garantito.",
+    "factBoxTitle": "In breve",
+    "fact1": "Fronte mare con accesso diretto alla spiaggia",
+    "fact2": "4 camere e 2 appartamenti",
+    "fact3": "Colazione inclusa (nelle camere B&B)",
+    "fact4": "Parcheggio privato gratuito",
+    "fact5": "Wi-Fi gratuito in tutta la struttura",
+    "fact6": "A 9 minuti a piedi dal centro"
+  },
+
+  "rooms": {
+    "title": "Le Camere",
+    "metaDescription": "Scopri le camere del nostro B&B a Castiglione della Pescaia: camere matrimoniali con vista mare, balconcino, aria condizionata e colazione inclusa.",
+    "hero": "Le Camere",
+    "subtitle": "Ambienti ristrutturati, comfort moderni, vista sul mare",
+    "intro": "Le nostre camere sono affacciate direttamente sul mare. Dispongono tutte di aria condizionata, Wi-Fi gratuito, TV, frigorifero e bagno privato. La colazione, servita nella sala principale con vista mare, è sempre inclusa. Parcheggio privato garantito. Le nostre camere possono ospitare fino a 3 persone.",
+    "amenitiesTitle": "Servizi inclusi in tutte le camere",
+    "maxGuests": "Fino a {n} ospiti",
+    "faqTitle": "Domande frequenti sulle camere"
+  },
+
+  "apartments": {
+    "title": "Gli Appartamenti",
+    "metaDescription": "Appartamenti fronte mare a Castiglione della Pescaia per famiglie e gruppi. Cucina attrezzata, animali ammessi, parcheggio privato.",
+    "hero": "Gli Appartamenti",
+    "subtitle": "Indipendenza e comfort a pochi passi dalla spiaggia",
+    "intro": "I nostri appartamenti sono interamente accessoriati e si trovano a pochi metri dalla spiaggia. Sono la soluzione ideale per famiglie numerose o soggiorni più lunghi. Negli appartamenti sono ammessi animali domestici di piccola taglia.",
+    "maxGuests": "Fino a {n} ospiti",
+    "bedrooms": "{n} camere da letto",
+    "bathrooms": "{n} bagni",
+    "petsAllowed": "Animali ammessi",
+    "petsNotAllowed": "Animali non ammessi",
+    "faqTitle": "Domande frequenti sugli appartamenti"
+  },
+
+  "surroundings": {
+    "title": "I Dintorni",
+    "metaDescription": "Scopri le attrazioni vicino al nostro B&B a Castiglione della Pescaia: spiagge, riserve naturali, borghi medievali e ottima cucina della Maremma Toscana.",
+    "hero": "I Dintorni",
+    "subtitle": "Un territorio tutto da scoprire",
+    "intro": "Castiglione della Pescaia si trova nel cuore della Maremma Toscana, con le 5 Vele di Legambiente e la Bandiera Blu d'Europa. A 22 km da Grosseto, è circondata da natura incontaminata, siti storici e borghi pittoreschi.",
+    "beachesTitle": "Le Spiagge",
+    "attractionsTitle": "Attrazioni Naturalistiche",
+    "cultureTitle": "Attrazioni Culturali",
+    "foodTitle": "Enogastronomia",
+    "villagesTitle": "I Borghi"
+  },
+
+  "contact": {
+    "title": "Contatti",
+    "metaDescription": "Contatta il nostro B&B a Castiglione della Pescaia. Telefono, email, indirizzo e FAQ per pianificare il tuo soggiorno in Maremma Toscana.",
+    "hero": "Contatti",
+    "subtitle": "Siamo qui per aiutarvi",
+    "intro": "Contattaci per prenotazioni o ulteriori informazioni. Saremo lieti di rispondere ad ogni domanda e aiutarti a scegliere la sistemazione più adatta alle tue esigenze.",
+    "phone": "Telefono",
+    "email": "Email",
+    "address": "Indirizzo",
+    "faqTitle": "Domande Frequenti",
+    "mapTitle": "Come raggiungerci"
+  },
+
+  "book": {
+    "title": "Prenota",
+    "metaDescription": "Prenota direttamente la tua camera o appartamento al nostro B&B a Castiglione della Pescaia. Verifica disponibilità e tariffe online.",
+    "hero": "Prenota il tuo soggiorno",
+    "backToSite": "Torna al sito"
+  },
+
+  "footer": {
+    "rights": "Tutti i diritti riservati",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy",
+    "vatLabel": "P.IVA"
+  },
+
+  "amenities": {
+    "wifi": "Wi-Fi gratuito",
+    "ac": "Aria condizionata",
+    "tv": "Televisore",
+    "minibar": "Frigorifero",
+    "private-bath": "Bagno privato",
+    "sea-view": "Vista mare",
+    "balcony": "Balconcino",
+    "kitchen": "Cucina attrezzata",
+    "washing-machine": "Lavatrice",
+    "garden": "Giardino privato",
+    "parking": "Parcheggio privato",
+    "breakfast": "Colazione inclusa",
+    "beach-access": "Accesso diretto al mare"
+  },
+
+  "meta": {
+    "separator": " | ",
+    "siteName": "Castiglione della Pescaia"
+  }
+}

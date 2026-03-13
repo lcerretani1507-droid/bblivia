@@ -1,0 +1,36 @@
+---
+import type { Lang } from '../i18n/utils';
+
+interface FaqItem {
+  id: string;
+  question: Record<string, string>;
+  answer: Record<string, string>;
+}
+
+interface Props {
+  lang: Lang;
+  items: FaqItem[];
+}
+const { lang, items } = Astro.props;
+---
+
+<div class="space-y-3">
+  {items.map((item, idx) => (
+    <details class="group bg-white rounded-xl border border-sea-100 overflow-hidden" id={`faq-${item.id}`}>
+      <summary class="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer select-none list-none hover:bg-sea-50 transition-colors">
+        <span class="font-medium text-sea-900 text-sm sm:text-base">{item.question[lang]}</span>
+        <svg
+          class="w-5 h-5 flex-shrink-0 text-sea-400 transition-transform duration-200 group-open:rotate-180"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <div class="px-6 pb-5 text-sea-700 text-sm leading-relaxed border-t border-sea-100 pt-4">
+        {item.answer[lang]}
+      </div>
+    </details>
+  ))}
+</div>

@@ -1,0 +1,109 @@
+---
+import config from '../../data/config.json';
+import type { Lang, RouteName } from '../i18n/utils';
+import { allRoutes } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  routeName: RouteName;
+  pageTitle?: string;
+  pageDescription?: string;
+  breadcrumbs?: { name: string; url: string }[];
+  extraSchemas?: object[];
+}
+
+const { lang, routeName, pageTitle, pageDescription, breadcrumbs, extraSchemas = [] } = Astro.props;
+const siteUrl = config.siteUrl;
+const currentUrl = siteUrl + allRoutes[routeName][lang];
+
+const lodgingBusiness = {
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "additionalType": "https://schema.org/BedAndBreakfast",
+  "name": config.propertyName,
+  "description": config.description[lang],
+  "url": siteUrl,
+  "telephone": config.phone,
+  "email": config.email,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": config.address.street,
+    "addressLocality": config.address.city,
+    "addressRegion": config.address.province,
+    "postalCode": config.address.postalCode,
+    "addressCountry": config.address.country
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": config.coordinates.lat,
+    "longitude": config.coordinates.lng
+  },
+  "image": [`${siteUrl}/images/hero.jpg`],
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Beach Access", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Breakfast Included", "value": true }
+  ],
+  "checkinTime": config.checkinTime,
+  "checkoutTime": config.checkoutTime,
+  "availableLanguage": config.languages,
+  "currenciesAccepted": config.currency,
+  "paymentAccepted": config.paymentMethods[lang],
+  "hasMap": `https://maps.google.com/?q=${config.coordinates.lat},${config.coordinates.lng}`,
+  ...(config.socials.facebook || config.socials.instagram ? {
+    "sameAs": [
+      config.socials.facebook,
+      config.socials.instagram,
+      config.socials.tripadvisor,
+    ].filter(Boolean)
+  } : {})
+};
+
+const webSite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": config.propertyName,
+  "url": siteUrl,
+  "inLanguage": ["it", "en", "de"],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": siteUrl + allRoutes.book[lang],
+    "name": lang === 'it' ? "Prenota" : lang === 'de' ? "Buchen" : "Book"
+  }
+};
+
+const webPage = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": pageTitle ?? config.propertyName,
+  "description": pageDescription ?? config.description[lang],
+  "url": currentUrl,
+  "inLanguage": lang,
+  "isPartOf": { "@type": "WebSite", "url": siteUrl }
+};
+
+const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((item, idx) => ({
+    "@type": "ListItem",
+    "position": idx + 1,
+    "name": item.name,
+    "item": item.url
+  }))
+} : null;
+
+const allSchemas = [
+  lodgingBusiness,
+  webSite,
+  webPage,
+  ...(breadcrumbSchema ? [breadcrumbSchema] : []),
+  ...extraSchemas,
+];
+---
+
+{allSchemas.map(schema => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}

@@ -1,0 +1,42 @@
+---
+import type { Lang } from '../i18n/utils';
+import { useTranslations } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  title?: string;
+  subtitle?: string;
+  variant?: 'banner' | 'compact';
+}
+const { lang, title, subtitle, variant = 'banner' } = Astro.props;
+const t = useTranslations(lang);
+---
+
+{variant === 'banner' ? (
+  <section class="bg-sea-700 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">
+        {title ?? t.home.ctaBannerTitle}
+      </h2>
+      <p class="text-white/75 text-lg mb-8 max-w-xl mx-auto">
+        {subtitle ?? t.home.ctaBannerText}
+      </p>
+      <a
+        href={t.routes.book}
+        class="inline-block px-8 py-4 bg-sand-400 hover:bg-sand-300 text-sea-900 font-bold rounded-full text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform"
+      >
+        {t.cta.checkAvailability}
+      </a>
+    </div>
+  </section>
+) : (
+  <a
+    href={t.routes.book}
+    class="inline-flex items-center gap-2 px-6 py-3 bg-sand-400 hover:bg-sand-300 text-sea-900 font-semibold rounded-full transition-all shadow hover:shadow-md hover:-translate-y-px transform text-sm"
+  >
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    </svg>
+    {t.cta.bookNow}
+  </a>
+)}

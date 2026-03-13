@@ -1,0 +1,86 @@
+# B&B [PROPERTY_NAME] — Extended LLM Data
+
+> Full property information for AI assistants and language model crawlers.
+> See also: https://www.example.com/llms.txt (summary version)
+
+## Property Identity
+
+- Name: B&B [PROPERTY_NAME]
+- Type: Bed & Breakfast (family-run)
+- Address: [ADDRESS], 58043 Castiglione della Pescaia (GR), Italy
+- Region: Maremma Toscana, Tuscany, Italy
+- Province: Grosseto (GR)
+- GPS: [LAT], [LNG]
+- Founded: [YEAR]
+- Website: https://www.example.com
+- Phone: [PHONE]
+- Email: [EMAIL]
+
+## Room Descriptions
+
+### Standard Room (camera-standard)
+Double room (matrimoniale) with small private balcony. Fully renovated. Air conditioning, TV, mini fridge, free WiFi, private bathroom. Breakfast included. Max 2 guests.
+
+### Classic Room (camera-classic)
+Double room with lateral sea view. Tastefully furnished with all modern comforts: air conditioning, TV, mini fridge, free WiFi, private bathroom. Breakfast included. Max 2 guests.
+
+### Classic with Balcony (classic-balconcino)
+Double room with private balcony and sea view. Ideal for watching sunrises and sunsets. Air conditioning, TV, mini fridge, free WiFi, private bathroom. Breakfast included. Max 2 guests.
+
+### Superior Sea View (superior-vista-mare)
+The most exclusive room. Spacious double or triple room with frontal panoramic sea view. Air conditioning, TV, mini fridge, free WiFi, private bathroom. Breakfast included. Max 3 guests.
+
+## Apartment Descriptions
+
+### Sea View Apartment (appartamento-mare)
+Two-bedroom apartment, 1 bathroom, max 4 guests. Located metres from the beach with sea view. Fully equipped kitchen, washing machine, air conditioning, WiFi, TV. Small pets welcome. Breakfast not included (available on request). Ideal for families or groups.
+
+### Garden Apartment (appartamento-giardino)
+Three-bedroom apartment, 2 bathrooms, max 6 guests. Spacious with private garden. Private parking included. Fully equipped kitchen, washing machine, air conditioning, WiFi, TV. Small pets welcome. Few minutes' walk to beach. Ideal for large families or groups.
+
+## Frequently Asked Questions
+
+Q: What are the check-in and check-out times?
+A: Check-in is from 14:30 to 18:00. Check-out must be completed by 10:00.
+
+Q: Is parking free?
+A: Yes, free private parking in a gated courtyard. Not supervised. Reserved for guests.
+
+Q: How far is the property from the sea?
+A: The property is directly on the seafront with direct beach access via a private passage.
+
+Q: How far is the town centre?
+A: About a 9-minute walk.
+
+Q: Are pets allowed?
+A: Pets are not allowed in B&B rooms. Small pets are welcome in the apartments.
+
+Q: Is breakfast included?
+A: Yes, breakfast is always included in B&B room prices. Served in the main sea-view dining room. Not included in apartment rates, but available on request.
+
+Q: Is there free WiFi?
+A: Yes, free WiFi throughout the property.
+
+Q: Can I leave luggage after check-out?
+A: Yes, luggage storage available on request.
+
+## Nearby Attractions
+
+### Beaches
+- Cala Violina: 14 min drive. Famous for quartz sand that "sings" when walked on. Inside Bandite di Scarlino Nature Reserve.
+- Punta Ala: 19 min drive. Exclusive beach with crystal water and pine forest.
+- Rocchette: 12 min drive. Wild beach surrounded by Mediterranean scrub.
+
+### Nature
+- Diaccia Botrona: 8 min walk. Wetland nature reserve. Famous for birdwatching. Spectacular sunsets.
+- Parco dell'Uccellina: 60 min drive. WWF protected. Wild boar, deer, free-roaming horses, unspoilt beaches.
+
+### Culture
+- Tarot Garden (Giardino dei Tarocchi): 60 min drive. Art park by Niki de Saint Phalle.
+
+### Food & Wine
+- Fattoria Le Mortelle: 11 min drive. Antinori family winery.
+
+### Villages
+- Populonia: 45 min drive. 15th-century medieval village, Archaeological Museum.
+- Pitigliano & Sorano: 90 min drive. Villages carved into tufa rock ("Area del Tufo").

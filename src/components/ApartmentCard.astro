@@ -1,0 +1,95 @@
+---
+import type { Lang } from '../i18n/utils';
+import { useTranslations } from '../i18n/utils';
+
+interface Apartment {
+  id: string;
+  image: string;
+  imageAlt: Record<string, string>;
+  maxGuests: number;
+  bedrooms: number;
+  bathrooms: number;
+  petsAllowed: boolean;
+  amenities: string[];
+  name: Record<string, string>;
+  shortDescription: Record<string, string>;
+  description: Record<string, string>;
+}
+
+interface Props {
+  apartment: Apartment;
+  lang: Lang;
+}
+const { apartment, lang } = Astro.props;
+const t = useTranslations(lang);
+
+const amenityIcons: Record<string, string> = {
+  wifi: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>`,
+  ac: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>`,
+  tv: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>`,
+  kitchen: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>`,
+  'washing-machine': `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke-width="2"/><rect x="3" y="3" width="18" height="18" rx="2" stroke-width="2"/></svg>`,
+  'sea-view': `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>`,
+  'private-bath': `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+  garden: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="20" x2="4" y2="16" stroke-width="2"/></svg>`,
+  parking: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m0 0H8m4 0h4M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>`,
+};
+---
+
+<article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+  <div class="relative overflow-hidden aspect-[4/3]">
+    <img
+      src={apartment.image}
+      alt={apartment.imageAlt[lang]}
+      class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+      loading="lazy"
+      width="800"
+      height="600"
+    />
+    {apartment.petsAllowed && (
+      <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-sea-700 text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
+        🐾 {t.apartments.petsAllowed}
+      </div>
+    )}
+  </div>
+
+  <div class="p-6 flex flex-col flex-1">
+    <h3 class="font-serif text-xl font-bold text-sea-900 mb-1">{apartment.name[lang]}</h3>
+    <p class="text-sea-600 text-sm mb-4">{apartment.shortDescription[lang]}</p>
+
+    <!-- Stats row -->
+    <div class="flex items-center gap-4 mb-4 text-sm text-sea-700">
+      <span class="flex items-center gap-1">
+        <svg class="w-4 h-4 text-sand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+        {t.apartments.bedrooms.replace('{n}', String(apartment.bedrooms))}
+      </span>
+      <span class="flex items-center gap-1">
+        <svg class="w-4 h-4 text-sand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        {t.apartments.maxGuests.replace('{n}', String(apartment.maxGuests))}
+      </span>
+    </div>
+
+    <!-- Amenity chips -->
+    <div class="flex flex-wrap gap-2 mb-5">
+      {apartment.amenities.slice(0, 5).map(a => (
+        <span class="inline-flex items-center gap-1 text-xs text-sea-700 bg-sea-50 border border-sea-100 px-2.5 py-1 rounded-full">
+          <span set:html={amenityIcons[a] ?? ''} />
+          {t.amenities[a as keyof typeof t.amenities] ?? a}
+        </span>
+      ))}
+    </div>
+
+    <div class="mt-auto">
+      <a
+        href={t.routes.book}
+        class="block w-full text-center px-5 py-3 bg-sea-700 hover:bg-sea-600 text-white font-semibold rounded-xl transition-colors text-sm"
+      >
+        {t.cta.bookApartment}
+      </a>
+    </div>
+  </div>
+</article>

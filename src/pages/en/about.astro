@@ -1,0 +1,70 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BookingCTA from '../../components/BookingCTA.astro';
+import { useTranslations } from '../../i18n/utils';
+import config from '../../../data/config.json';
+
+const lang = 'en';
+const t = useTranslations(lang);
+---
+
+<Layout lang={lang} routeName="about" title={t.about.title} description={t.about.metaDescription}
+  breadcrumbs={[{ name: 'Home', url: config.siteUrl + t.routes.home },{ name: t.about.title, url: config.siteUrl + t.routes.about }]}>
+  <section class="relative h-64 sm:h-80 flex items-center justify-center overflow-hidden -mt-20">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1549638441-b787d2e11f14?w=1200&q=80" alt="B&B Castiglione della Pescaia sea view" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-sea-900/60"></div>
+    </div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="font-serif text-4xl sm:text-5xl font-bold drop-shadow-md">{t.about.hero}</h1>
+    </div>
+  </section>
+  <section class="py-20 px-4 bg-warm-100">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="font-serif text-3xl font-bold text-sea-900 mb-5">{t.about.section1Title}</h2>
+        <p class="text-sea-700 text-lg leading-relaxed mb-6">{t.about.section1Text}</p>
+        <p class="text-sea-700 leading-relaxed">{t.about.section2Text}</p>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&q=80" alt="Sea view room B&B" class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]" loading="lazy" />
+      </div>
+    </div>
+  </section>
+  <section class="py-16 px-4 bg-sea-900 text-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-serif text-2xl font-bold text-sand-300 text-center mb-10">{t.about.factBoxTitle}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { icon: '🌊', text: t.about.fact1 },
+          { icon: '🛏️', text: t.about.fact2 },
+          { icon: '☕', text: t.about.fact3 },
+          { icon: '🚗', text: t.about.fact4 },
+          { icon: '📶', text: t.about.fact5 },
+          { icon: '🚶', text: t.about.fact6 },
+        ].map(fact => (
+          <div class="flex items-start gap-3 bg-white/8 rounded-xl p-4">
+            <span class="text-2xl flex-shrink-0">{fact.icon}</span>
+            <span class="text-white/85 text-sm leading-relaxed">{fact.text}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=800&q=80" alt="Breakfast by the sea" class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]" loading="lazy" />
+      </div>
+      <div>
+        <h2 class="font-serif text-3xl font-bold text-sea-900 mb-5">{t.about.section3Title}</h2>
+        <p class="text-sea-700 text-lg leading-relaxed mb-8">{t.about.section3Text}</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href={t.routes.rooms} class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-sea-700 hover:bg-sea-600 text-white font-semibold rounded-full transition-colors">{t.cta.viewAllRooms}</a>
+          <a href={t.routes.apartments} class="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-sea-700 text-sea-700 hover:bg-sea-700 hover:text-white font-semibold rounded-full transition-all">{t.cta.viewAllApartments}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <BookingCTA lang={lang} />
+</Layout>

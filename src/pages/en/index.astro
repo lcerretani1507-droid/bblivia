@@ -1,0 +1,146 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BookingCTA from '../../components/BookingCTA.astro';
+import RoomCard from '../../components/RoomCard.astro';
+import ApartmentCard from '../../components/ApartmentCard.astro';
+import { useTranslations } from '../../i18n/utils';
+import config from '../../../data/config.json';
+import rooms from '../../../data/rooms.json';
+import apartments from '../../../data/apartments.json';
+
+const lang = 'en';
+const t = useTranslations(lang);
+---
+
+<Layout
+  lang={lang}
+  routeName="home"
+  title="Home"
+  description={config.description[lang]}
+  breadcrumbs={[{ name: 'Home', url: config.siteUrl + t.routes.home }]}
+>
+  <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden -mt-20">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
+        alt="Sea view Castiglione della Pescaia, Maremma Toscana"
+        class="w-full h-full object-cover"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-hero-gradient"></div>
+    </div>
+    <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+      <p class="text-sand-200 text-sm sm:text-base font-medium tracking-widest uppercase mb-4">{t.home.heroSubtitle}</p>
+      <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">{config.propertyName}</h1>
+      <p class="text-white/85 text-lg sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed">{config.tagline[lang]}</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={t.routes.book} class="px-8 py-4 bg-sand-400 hover:bg-sand-300 text-sea-900 font-bold rounded-full text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform">{t.cta.bookNow}</a>
+        <a href={t.routes.rooms} class="px-8 py-4 bg-white/15 hover:bg-white/25 text-white border border-white/30 font-semibold rounded-full text-lg transition-all backdrop-blur-sm">{t.cta.viewAllRooms}</a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 animate-bounce">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 bg-warm-100">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-sand-500 text-sm font-semibold uppercase tracking-widest mb-3">{t.home.aboutSubtitle}</p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sea-900 mb-6">{t.home.aboutTitle}</h2>
+        <p class="text-sea-700 leading-relaxed mb-8 text-lg">{t.home.aboutText}</p>
+        <a href={t.routes.about} class="inline-flex items-center gap-2 text-sea-700 hover:text-sea-500 font-semibold transition-colors group">
+          {t.cta.discoverMore}
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Welcoming B&B Castiglione della Pescaia" class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]" loading="lazy" />
+        <div class="absolute -bottom-4 -left-4 bg-sea-900 text-white rounded-xl px-5 py-3 shadow-lg hidden sm:block">
+          <span class="font-serif text-3xl font-bold text-sand-300">{config.foundedYear}</span>
+          <p class="text-xs text-white/60 mt-0.5">In business since</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-sand-500 text-sm font-semibold uppercase tracking-widest mb-3">{t.home.roomsSubtitle}</p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sea-900">{t.home.roomsTitle}</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        {rooms.map((room, i) => <RoomCard room={room} lang={lang} featured={i === 3} />)}
+      </div>
+      <div class="text-center">
+        <a href={t.routes.rooms} class="inline-flex items-center gap-2 px-7 py-3 border-2 border-sea-700 text-sea-700 hover:bg-sea-700 hover:text-white font-semibold rounded-full transition-all">
+          {t.cta.viewAllRooms}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <BookingCTA lang={lang} />
+
+  <section class="py-20 px-4 bg-warm-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-sand-500 text-sm font-semibold uppercase tracking-widest mb-3">{t.home.apartmentsSubtitle}</p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sea-900">{t.home.apartmentsTitle}</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
+        {apartments.map(apt => <ApartmentCard apartment={apt} lang={lang} />)}
+      </div>
+      <div class="text-center">
+        <a href={t.routes.apartments} class="inline-flex items-center gap-2 px-7 py-3 border-2 border-sea-700 text-sea-700 hover:bg-sea-700 hover:text-white font-semibold rounded-full transition-all">
+          {t.cta.viewAllApartments}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 bg-sea-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=1200&q=60" alt="" class="w-full h-full object-cover" loading="lazy" aria-hidden="true" />
+    </div>
+    <div class="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-sand-300 text-sm font-semibold uppercase tracking-widest mb-3">{t.home.surroundingsSubtitle}</p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-6">{t.home.surroundingsTitle}</h2>
+        <p class="text-white/75 leading-relaxed mb-8 text-lg">{t.home.surroundingsText}</p>
+        <a href={t.routes.surroundings} class="inline-flex items-center gap-2 px-7 py-3 border-2 border-sand-400 text-sand-300 hover:bg-sand-400 hover:text-sea-900 font-semibold rounded-full transition-all">
+          {t.cta.discoverMore}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500&q=80" alt="Maremma Toscana beach" class="rounded-xl object-cover aspect-square" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=500&q=80" alt="Tuscany medieval village" class="rounded-xl object-cover aspect-square mt-8" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sea-900 mb-4">{t.home.contactTitle}</h2>
+      <p class="text-sea-600 text-lg mb-8 max-w-xl mx-auto">{t.home.contactText}</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+        <a href={`tel:${config.phone}`} class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-sea-50 hover:bg-sea-100 text-sea-800 font-medium rounded-full transition-colors">
+          <svg class="w-4 h-4 text-sand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          {config.phone}
+        </a>
+        <a href={`mailto:${config.email}`} class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-sea-50 hover:bg-sea-100 text-sea-800 font-medium rounded-full transition-colors">
+          <svg class="w-4 h-4 text-sand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          {config.email}
+        </a>
+      </div>
+      <a href={t.routes.contact} class="inline-flex items-center gap-2 text-sea-700 hover:text-sea-500 font-semibold transition-colors group">
+        {t.cta.discoverMore}
+        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+</Layout>

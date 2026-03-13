@@ -1,0 +1,47 @@
+{
+  "propertyName": "B&B [PROPERTY_NAME]",
+  "tagline": {
+    "it": "Dal cuore della Maremma Toscana, direttamente sul mare",
+    "en": "From the heart of Maremma Toscana, directly on the sea",
+    "de": "Aus dem Herzen der toskanischen Maremma, direkt am Meer"
+  },
+  "description": {
+    "it": "Bed & Breakfast a conduzione familiare a Castiglione della Pescaia, Maremma Toscana. Camere e appartamenti fronte mare con colazione inclusa, parcheggio privato e accesso diretto alla spiaggia.",
+    "en": "Family-run Bed & Breakfast in Castiglione della Pescaia, Maremma Toscana. Sea-view rooms and apartments with breakfast included, private parking, and direct beach access.",
+    "de": "Familiengeführtes Bed & Breakfast in Castiglione della Pescaia, Maremma Toscana. Meerblickzimmer und Apartments mit inkludiertem Frühstück, Privatparkplatz und direktem Strandzugang."
+  },
+  "address": {
+    "street": "Via [STREET], [NUMBER]",
+    "city": "Castiglione della Pescaia",
+    "province": "GR",
+    "postalCode": "58043",
+    "country": "IT",
+    "countryName": "Italy",
+    "full": "Via [STREET], [NUMBER] - 58043, Castiglione della Pescaia (GR)"
+  },
+  "phone": "+39 [PHONE]",
+  "email": "info@[DOMAIN].com",
+  "siteUrl": "https://www.example.com",
+  "bookingIframeUrl": "https://b-b-livia.amenitiz.io/it/booking/room",
+  "coordinates": {
+    "lat": 42.764,
+    "lng": 10.882
+  },
+  "checkinTime": "14:30",
+  "checkoutTime": "10:00",
+  "foundedYear": 1988,
+  "totalRooms": 4,
+  "totalApartments": 2,
+  "socials": {
+    "instagram": "",
+    "facebook": "",
+    "tripadvisor": ""
+  },
+  "currency": "EUR",
+  "paymentMethods": {
+    "it": "Contanti, Carta di credito",
+    "en": "Cash, Credit Card",
+    "de": "Bargeld, Kreditkarte"
+  },
+  "languages": ["Italian", "English", "German"]
+}
