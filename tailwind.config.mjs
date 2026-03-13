@@ -31,8 +31,8 @@ export default {
         },
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        sans:  ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['"Cormorant Garamond"', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'hero-gradient': 'linear-gradient(to bottom, rgba(6,30,40,0.45) 0%, rgba(6,30,40,0.2) 50%, rgba(6,30,40,0.6) 100%)',
