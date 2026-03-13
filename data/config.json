@@ -1,5 +1,5 @@
 {
-  "propertyName": "B&B [PROPERTY_NAME]",
+  "propertyName": "B&B da Livia",
   "tagline": {
     "it": "Dal cuore della Maremma Toscana, direttamente sul mare",
     "en": "From the heart of Maremma Toscana, directly on the sea",
@@ -11,17 +11,17 @@
     "de": "Familiengeführtes Bed & Breakfast in Castiglione della Pescaia, Maremma Toscana. Meerblickzimmer und Apartments mit inkludiertem Frühstück, Privatparkplatz und direktem Strandzugang."
   },
   "address": {
-    "street": "Via [STREET], [NUMBER]",
+    "street": "Via Arenile, 2",
     "city": "Castiglione della Pescaia",
     "province": "GR",
     "postalCode": "58043",
     "country": "IT",
     "countryName": "Italy",
-    "full": "Via [STREET], [NUMBER] - 58043, Castiglione della Pescaia (GR)"
+    "full": "Via Arenile, 2 - 58043, Castiglione della Pescaia (GR)"
   },
-  "phone": "+39 [PHONE]",
-  "email": "info@[DOMAIN].com",
-  "siteUrl": "https://www.example.com",
+  "phone": "+39 334 575 1125",
+  "email": "info@bblivia.com",
+  "siteUrl": "https://www.bblivia.com",
   "bookingIframeUrl": "https://b-b-livia.amenitiz.io/it/booking/room",
   "coordinates": {
     "lat": 42.764,
