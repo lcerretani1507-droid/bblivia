@@ -1,7 +1,7 @@
 ---
 import config from '../../data/config.json';
 import type { Lang, RouteName } from '../i18n/utils';
-import { useTranslations, getHreflangs, allRoutes } from '../i18n/utils';
+import { useTranslations, getHreflangs, rawRoutes } from '../i18n/utils';
 import SchemaOrg from '../components/SchemaOrg.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -29,7 +29,7 @@ const {
 
 const t = useTranslations(lang);
 const hreflangs = getHreflangs(routeName, config.siteUrl);
-const canonicalUrl = config.siteUrl + allRoutes[routeName][lang];
+const canonicalUrl = config.siteUrl + rawRoutes[routeName][lang];
 const fullOgImage = config.siteUrl + ogImage;
 const fullTitle = `${title}${t.meta.separator}${config.propertyName}`;
 ---

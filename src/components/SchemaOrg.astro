@@ -1,7 +1,7 @@
 ---
 import config from '../../data/config.json';
 import type { Lang, RouteName } from '../i18n/utils';
-import { allRoutes } from '../i18n/utils';
+import { rawRoutes } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -14,7 +14,7 @@ interface Props {
 
 const { lang, routeName, pageTitle, pageDescription, breadcrumbs, extraSchemas = [] } = Astro.props;
 const siteUrl = config.siteUrl;
-const currentUrl = siteUrl + allRoutes[routeName][lang];
+const currentUrl = siteUrl + rawRoutes[routeName][lang];
 
 const lodgingBusiness = {
   "@context": "https://schema.org",
@@ -69,7 +69,7 @@ const webSite = {
   "inLanguage": ["it", "en", "de"],
   "potentialAction": {
     "@type": "ReserveAction",
-    "target": siteUrl + allRoutes.book[lang],
+    "target": siteUrl + rawRoutes.book[lang],
     "name": lang === 'it' ? "Prenota" : lang === 'de' ? "Buchen" : "Book"
   }
 };

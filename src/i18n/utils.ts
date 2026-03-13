@@ -6,47 +6,65 @@ export type Lang = 'it' | 'en' | 'de';
 
 const translations = { it, en, de } as const;
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+export function withBase(path: string): string {
+  return base + path;
+}
+
 export function getLang(url: URL): Lang {
-  const [, lang] = url.pathname.split('/');
+  const stripped = url.pathname.startsWith(base + '/')
+    ? url.pathname.slice(base.length)
+    : url.pathname;
+  const [, lang] = stripped.split('/');
   if (lang === 'en' || lang === 'de') return lang;
   return 'it';
 }
 
 export function useTranslations(lang: Lang) {
-  return translations[lang];
+  const t = translations[lang];
+  return {
+    ...t,
+    routes: Object.fromEntries(
+      Object.entries(t.routes).map(([key, val]) => [key, withBase(val)])
+    ) as typeof t.routes,
+  };
 }
 
 /** Get the equivalent route path in another language */
 export function getLocalizedPath(currentPath: string, targetLang: Lang): string {
+  const path = currentPath.startsWith(base)
+    ? currentPath.slice(base.length)
+    : currentPath;
   const t = translations[targetLang];
   const routeMap: Record<string, string> = {
-    '/it/': t.routes.home,
-    '/en/': t.routes.home,
-    '/de/': t.routes.home,
-    '/it/chi-siamo': t.routes.about,
-    '/en/about': t.routes.about,
-    '/de/ueber-uns': t.routes.about,
-    '/it/camere': t.routes.rooms,
-    '/en/rooms': t.routes.rooms,
-    '/de/zimmer': t.routes.rooms,
-    '/it/appartamenti': t.routes.apartments,
-    '/en/apartments': t.routes.apartments,
-    '/de/apartments': t.routes.apartments,
-    '/it/dintorni': t.routes.surroundings,
-    '/en/surroundings': t.routes.surroundings,
-    '/de/umgebung': t.routes.surroundings,
-    '/it/contatti': t.routes.contact,
-    '/en/contact': t.routes.contact,
-    '/de/kontakt': t.routes.contact,
-    '/it/prenota': t.routes.book,
-    '/en/book': t.routes.book,
-    '/de/buchen': t.routes.book,
+    '/it/': withBase(t.routes.home),
+    '/en/': withBase(t.routes.home),
+    '/de/': withBase(t.routes.home),
+    '/it/chi-siamo': withBase(t.routes.about),
+    '/en/about': withBase(t.routes.about),
+    '/de/ueber-uns': withBase(t.routes.about),
+    '/it/camere': withBase(t.routes.rooms),
+    '/en/rooms': withBase(t.routes.rooms),
+    '/de/zimmer': withBase(t.routes.rooms),
+    '/it/appartamenti': withBase(t.routes.apartments),
+    '/en/apartments': withBase(t.routes.apartments),
+    '/de/apartments': withBase(t.routes.apartments),
+    '/it/dintorni': withBase(t.routes.surroundings),
+    '/en/surroundings': withBase(t.routes.surroundings),
+    '/de/umgebung': withBase(t.routes.surroundings),
+    '/it/contatti': withBase(t.routes.contact),
+    '/en/contact': withBase(t.routes.contact),
+    '/de/kontakt': withBase(t.routes.contact),
+    '/it/prenota': withBase(t.routes.book),
+    '/en/book': withBase(t.routes.book),
+    '/de/buchen': withBase(t.routes.book),
   };
-  return routeMap[currentPath] ?? t.routes.home;
+  return routeMap[path] ?? withBase(t.routes.home);
 }
 
-/** Map of all route slugs to their canonical lang versions */
-export const allRoutes = {
+/** Routes without base prefix — used for SEO canonical/hreflang with siteUrl */
+export const rawRoutes = {
   home:         { it: '/it/', en: '/en/', de: '/de/' },
   about:        { it: '/it/chi-siamo', en: '/en/about', de: '/de/ueber-uns' },
   rooms:        { it: '/it/camere', en: '/en/rooms', de: '/de/zimmer' },
@@ -56,11 +74,21 @@ export const allRoutes = {
   book:         { it: '/it/prenota', en: '/en/book', de: '/de/buchen' },
 } as const;
 
-export type RouteName = keyof typeof allRoutes;
+/** Navigation routes with base prefix */
+export const allRoutes: Record<string, Record<Lang, string>> = Object.fromEntries(
+  Object.entries(rawRoutes).map(([key, langs]) => [
+    key,
+    Object.fromEntries(
+      Object.entries(langs).map(([lang, path]) => [lang, withBase(path)])
+    ),
+  ])
+);
+
+export type RouteName = keyof typeof rawRoutes;
 
 /** Get all hreflang links for a given route name */
 export function getHreflangs(routeName: RouteName, siteUrl: string) {
-  const routes = allRoutes[routeName];
+  const routes = rawRoutes[routeName];
   return [
     { lang: 'it', href: siteUrl + routes.it },
     { lang: 'en', href: siteUrl + routes.en },
